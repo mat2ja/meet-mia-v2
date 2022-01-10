@@ -2,11 +2,11 @@
 import { ref } from 'vue';
 import NavDrawer from '@/components/nav/NavDrawer.vue';
 import HeaderLogo from '@/components/nav/HeaderLogo.vue';
-import useNavDrawer from '../composables/useNavDrawer.js';
+import useNavDrawer from '@/composables/useNavDrawer.js';
 
-const categoryBarOpen = ref(false);
 const { openNavDrawer } = useNavDrawer();
 
+const categoryBarOpen = ref(false);
 const toggleCategoryBar = () => {
   categoryBarOpen.value = !categoryBarOpen.value;
 };

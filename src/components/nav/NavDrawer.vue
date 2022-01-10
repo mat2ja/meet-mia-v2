@@ -1,6 +1,6 @@
 <script setup>
-import useNavDrawer from '@/composables/useNavDrawer.js';
 import HeaderLogo from '@/components/nav/HeaderLogo.vue';
+import useNavDrawer from '@/composables/useNavDrawer.js';
 
 const {
   isNavDrawerOpen,
