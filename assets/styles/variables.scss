@@ -1,0 +1,53 @@
+:root {
+  --peach-white: #fef8f5;
+  --peach-20: #fff0ea;
+  --peach-50: #ffe8df;
+  --peach-100: #ffe1d6;
+  --peach-200: #ffd4c4;
+  --peach-300: #fbc5b1; // ovo sam ja dodo
+  --peach-400: #ffbca3; // bivsa 300
+  --peach-500: #f6b094; // logo color
+  --peach-600: #d4947d;
+  --peach-700: #a8715d;
+  // --peach-800: #;
+  // --peach-900: #;
+
+  --burg-200: #f3c8c8;
+  --burg-500: #d68585;
+  --burg-600: #c66c6c;
+  --burg-700: #773838;
+  --burg-800: #491d1d;
+
+  --brown-800: #553b31;
+  --brown-900: #3d1f14;
+
+  --peach-white-opaque: hsla(17, 100%, 96%, 40%);
+  --burg-500-opaque: hsla(0, 50%, 68%, 35%);
+  --burg-600-opaque: rgba(198, 108, 108, 0.3);
+  --burg-700-opaque: rgba(118, 55, 55, 0.5);
+
+  --white-opaque: hsla(0, 0%, 100%, 0.25);
+
+  --border-radius: 4px;
+
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-md: 18px;
+  --text-lg: 20px;
+  --text-xl: 22px;
+  --text-2xl: 24px;
+  --text-3xl: 28px;
+  --text-4xl: 32px;
+  --text-5xl: 36px;
+  --text-6xl: 48px;
+  --text-7xl: 64px;
+  --text-8xl: 88px;
+
+  --font-display: 'BioRhyme', serif;
+  --font-primary: 'Dosis', sans-serif;
+
+  --nav-height: 70px;
+
+  --box-shadow-peach: 0 8px 20px 2px hsla(16, 100%, 82%, 0.3);
+}

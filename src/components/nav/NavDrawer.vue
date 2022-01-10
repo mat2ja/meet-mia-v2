@@ -1,0 +1,89 @@
+<script setup>
+import useNavDrawer from '@/composables/useNavDrawer.js';
+import HeaderLogo from '@/components/nav/HeaderLogo.vue';
+
+const {
+  isNavDrawerOpen,
+  isCategoryDropdownOpen,
+  closeNavDrawer,
+  toggleCategoryDropdown,
+} = useNavDrawer();
+</script>
+
+<template>
+  <div class="nav-drawer tablet" v-if="isNavDrawerOpen">
+    <header class="nav-drawer__header row">
+      <div class="icon__wrapper left" @click="closeNavDrawer">
+        <box-icon class="icon" size="md" name="x" />
+      </div>
+      <HeaderLogo />
+      <div class="header__hamburger tablet icon__wrapper right">
+        <a href="/kosarica" class="nav-link-mobile icon__link">
+          <box-icon class="icon" size="md" name="cart-alt" />
+        </a>
+      </div>
+    </header>
+    <nav class="nav-drawer__nav row">
+      <ul class="nav-drawer__list">
+        <li class="nav-drawer__item">
+          <span class="nav-drawer__link" @click="toggleCategoryDropdown">
+            Ponuda
+            <box-icon
+              class="icon inner-icon"
+              size="md"
+              name="chevron-down-square"
+            />
+          </span>
+          <ul class="nav-drawer-dropdown__list" v-if="isCategoryDropdownOpen">
+            <li class="nav-drawer-dropdown__item">
+              <a href="#" class="nav-drawer-dropdown__link">
+                <span class="emoji">🍰️</span> Kolači</a
+              >
+            </li>
+            <li class="nav-drawer-dropdown__item">
+              <a href="#" class="nav-drawer-dropdown__link">
+                <span class="emoji">🎂️</span> Torte</a
+              >
+            </li>
+            <li class="nav-drawer-dropdown__item">
+              <a href="#" class="nav-drawer-dropdown__link">
+                <span class="emoji">🥐</span> Krosasani
+              </a>
+            </li>
+            <li class="nav-drawer-dropdown__item">
+              <a href="#" class="nav-drawer-dropdown__link"
+                ><span class="emoji">🥪️</span> Sendviči</a
+              >
+            </li>
+            <li class="nav-drawer-dropdown__item">
+              <a href="#" class="nav-drawer-dropdown__link"
+                ><span class="emoji">🍹️</span> Ostalo</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-drawer__item">
+          <a href="o-nama.html" class="nav-drawer__link">O nama</a>
+        </li>
+        <li class="nav-drawer__item">
+          <a href="blog.html" class="nav-drawer__link">Blog</a>
+        </li>
+        <li class="nav-drawer__item">
+          <a href="kontakt.html" class="nav-drawer__link">Kontakt</a>
+        </li>
+      </ul>
+      <div class="nav-drawer__user">
+        <a
+          href="/profil"
+          class="nav-link nav-link-mobile"
+          aria-label="Location"
+        >
+          <box-icon class="icon" size="lg" name="user-circle" />
+          Matija Osrečki
+        </a>
+      </div>
+    </nav>
+  </div>
+</template>
+
+<style lang="scss"></style>
