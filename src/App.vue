@@ -1,6 +1,5 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-import 'boxicons';
 
 import TheFooter from '@/components/TheFooter.vue';
 import TheHeader from '@/components/TheHeader.vue';
@@ -19,53 +18,53 @@ const productsSections = [
         description:
           'Biskviti s lješnjacima, slani karamel, krema od mascarponea i karamela',
         price: '22.00',
-        imageUrl: 'product-01.avif',
+        imageUrl: 'salty-nutty.avif',
       },
       {
         name: 'Blu',
         description:
           'Hrskava podloga s lješnjacima, cheesecake s lješnjacima, borovnice, cheesecake mousse s vanilijom',
         price: '26.00',
-        imageUrl: 'product-01.avif',
+        imageUrl: 'blu.avif',
       },
       {
         name: 'Queen Niki',
         description:
           'Čokoladni biskvit, hrkavi sloj čokolade s lješnjacima, žele od karamele, čokoladna krema, mousse od tonke',
         price: '24.00',
-        imageUrl: 'product-01.avif',
+        imageUrl: 'queen-niki.avif',
       },
       {
         name: 'iPie',
         description: 'Tart od jabuka s crumbleom od lješnjaka i karamelom',
         price: '18.00',
-        imageUrl: 'product-01.avif',
+        imageUrl: 'ipie.avif',
       },
       {
         name: 'Veggie Bagel',
         description:
           'Domaće bagel pecivo s hummusom, avokadom, salatom, klice, chilli flakes',
         price: '25.00',
-        imageUrl: 'product-01.avif',
+        imageUrl: 'veggie-bagel.avif',
       },
       {
         name: 'Spring Cake',
         description:
           'Cheesecake podloga, biskvit od limuna, marelice, cheesecake mousse s bazgom',
         price: '28.00',
-        imageUrl: 'product-01.avif',
+        imageUrl: 'spring-cake.avif',
       },
       {
-        name: 'Cocoberry',
+        name: 'Meet Mia',
         description:
-          'Podloga od badema, krema od kokosa, mascarponea i Malibua, maline, biskvit od badema',
-        price: '25.00',
-        imageUrl: 'product-01.avif',
+          'Biskvit od pistacija, mousse od pistacija, hrskave pistacije, krema od čokolade i naranče',
+        price: '24.00',
+        imageUrl: 'meet-mia.avif',
       },
     ],
   },
   {
-    title: 'Posebna ponuda"',
+    title: 'Posebna ponuda',
     iconName: 'discount',
     items: [
       {
@@ -73,48 +72,48 @@ const productsSections = [
         description:
           'Biskviti s lješnjacima, slani karamel, krema od mascarponea i karamela',
         price: '22.00',
-        imageUrl: 'product-01.avif',
+        imageUrl: 'salty-nutty.avif',
       },
       {
         name: 'Blu',
         description:
           'Hrskava podloga s lješnjacima, cheesecake s lješnjacima, borovnice, cheesecake mousse s vanilijom',
         price: '26.00',
-        imageUrl: 'product-01.avif',
+        imageUrl: 'blu.avif',
       },
       {
         name: 'Queen Niki',
         description:
           'Čokoladni biskvit, hrkavi sloj čokolade s lješnjacima, žele od karamele, čokoladna krema, mousse od tonke',
         price: '24.00',
-        imageUrl: 'product-01.avif',
+        imageUrl: 'queen-niki.avif',
       },
       {
         name: 'iPie',
         description: 'Tart od jabuka s crumbleom od lješnjaka i karamelom',
         price: '18.00',
-        imageUrl: 'product-01.avif',
+        imageUrl: 'ipie.avif',
       },
       {
         name: 'Veggie Bagel',
         description:
           'Domaće bagel pecivo s hummusom, avokadom, salatom, klice, chilli flakes',
         price: '25.00',
-        imageUrl: 'product-01.avif',
+        imageUrl: 'veggie-bagel.avif',
       },
       {
         name: 'Spring Cake',
         description:
           'Cheesecake podloga, biskvit od limuna, marelice, cheesecake mousse s bazgom',
         price: '28.00',
-        imageUrl: 'product-01.avif',
+        imageUrl: 'spring-cake.avif',
       },
       {
-        name: 'Cocoberry',
+        name: 'Meet Mia',
         description:
-          'Podloga od badema, krema od kokosa, mascarponea i Malibua, maline, biskvit od badema',
-        price: '25.00',
-        imageUrl: 'product-01.avif',
+          'Biskvit od pistacija, mousse od pistacija, hrskave pistacije, krema od čokolade i naranče',
+        price: '24.00',
+        imageUrl: 'meet-mia.avif',
       },
     ],
   },
@@ -168,7 +167,6 @@ onMounted(() => {
 
 <style lang="scss">
 @import '../assets/styles/variables';
-@import 'https://fonts.googleapis.com/css2?family=BioRhyme:wght@400;700;800&family=Dosis:wght@300;400;500;600&display=swap';
 
 * {
   margin: 0;
@@ -225,6 +223,7 @@ h5,
 h6 {
   font-family: var(--font-display);
   line-height: 1.02;
+  font-weight: 700;
 }
 
 h2 {
@@ -352,6 +351,7 @@ section {
       width: max-content;
       transform: translateY(0);
     }
+
     @media only screen and(max-width: 600px) {
       // grid-column: 1 / span 1;
       transform: translateY(0);

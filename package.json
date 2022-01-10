@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "boxicons": "^2.1.1",
+    "vite-plugin-fonts": "^0.2.2",
     "vue": "^3.2.25"
   },
   "devDependencies": {

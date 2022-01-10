@@ -34,11 +34,7 @@ defineProps({
               <p class="product__crumbs">small text • 300g</p>
               <h5 class="product__name">{{ item.name }}</h5>
               <p class="product__description">
-                {{
-                  // item.description.length > 68
-                  //   ? item.description.slice(0, 68) + '...' :
-                  item.description
-                }}
+                {{ item.description }}
               </p>
             </div>
           </div>
