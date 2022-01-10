@@ -60,6 +60,37 @@ const products = ref([
   },
 ]);
 
+const categories = {
+  slatko: [
+    {
+      label: 'Kolači',
+      id: 'kolaci',
+    },
+    {
+      label: 'Torte',
+      id: 'torte',
+    },
+    {
+      label: 'Kroasani',
+      id: 'kroasani',
+    },
+  ],
+  slano: [
+    {
+      label: 'Sendviči',
+      id: 'sendvici',
+    },
+    {
+      label: 'Napitci',
+      id: 'napitci',
+    },
+    {
+      label: 'Cijela ponuda',
+      id: 'cijela-ponuda',
+    },
+  ],
+};
+
 export default () => {
   const getRandomProducts = (size) => {
     return sampleSize(products.value, size);
@@ -70,6 +101,7 @@ export default () => {
   };
   return {
     products,
+    categories,
     getRandomProducts,
     getProduct,
   };

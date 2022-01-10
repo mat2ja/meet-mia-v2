@@ -1,34 +1,7 @@
 <script setup>
-const categories = {
-  slatko: [
-    {
-      label: 'Kolači',
-      id: 'kolaci',
-    },
-    {
-      label: 'Torte',
-      id: 'torte',
-    },
-    {
-      label: 'Kroasani',
-      id: 'kroasani',
-    },
-  ],
-  slano: [
-    {
-      label: 'Sendviči',
-      id: 'sendvici',
-    },
-    {
-      label: 'Napitci',
-      id: 'napitci',
-    },
-    {
-      label: 'Cijela ponuda',
-      id: 'cijela-ponuda',
-    },
-  ],
-};
+import useProducts from '../../composables/useProducts.js';
+
+const { categories } = useProducts();
 
 const imageImport = (filename) => `url(./images/${filename}.jpg)`;
 </script>
