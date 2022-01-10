@@ -38,7 +38,7 @@ const imageImport = (filename) => `url(./images/${filename}.jpg)`;
   </section>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .section-categories {
   margin-top: 4rem;
 }

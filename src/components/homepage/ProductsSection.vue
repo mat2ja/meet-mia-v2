@@ -6,13 +6,19 @@ defineProps({
   title: String,
   offset: Number | String,
   items: Array,
+  icon: Object,
 });
 </script>
 
 <template>
   <section class="products-section">
     <div class="title-box row">
-      <slot />
+      <box-icon
+        v-if="icon"
+        class="icon"
+        :name="icon.name"
+        :type="icon.type || ''"
+      />
       <h2>{{ title }}</h2>
     </div>
     <div
@@ -27,7 +33,7 @@ defineProps({
   </section>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .products-section {
   margin-bottom: 4rem;
 

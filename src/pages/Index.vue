@@ -47,16 +47,17 @@ onBeforeUnmount(() => {
     :key="`${section.title}-${i}`"
     :title="section.title"
     :items="section.items"
+    :icon="section.icon"
     :offset="offset"
-  >
-    <box-icon class="icon" :name="section.icon.name" :type="section.icon.type || ''" />
-  </ProductsSection>
+  />
+   
 
   <CategoriesSection />
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 section {
-  padding: 2rem 0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 </style>

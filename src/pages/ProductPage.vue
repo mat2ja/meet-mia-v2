@@ -19,4 +19,4 @@ product.value = getProduct(productId);
   </div>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss" scoped></style>

@@ -15,7 +15,7 @@
   </section>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .section-hero {
   display: grid;
   grid-template-columns: repeat(12, 1fr);

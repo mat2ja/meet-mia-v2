@@ -8,10 +8,7 @@ defineProps({
   <div class="product-card">
     <RouterLink :to="{ name: 'product', params: { id: item.id } }">
       <div class="product-card__image">
-        <img
-          :src="`./images/products/${item.imageUrl}`"
-          alt="Product image"
-        />
+        <img :src="`./images/products/${item.imageUrl}`" alt="Product image" />
       </div>
     </RouterLink>
     <div class="product-card__content">
@@ -35,7 +32,7 @@ defineProps({
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .product-card {
   position: relative;
   overflow: hidden;

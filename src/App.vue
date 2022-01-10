@@ -48,6 +48,12 @@ body {
   background-size: contain;
 }
 
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 ul {
   list-style: none;
 }

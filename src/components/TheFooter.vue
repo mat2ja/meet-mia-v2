@@ -84,11 +84,11 @@ const footerItems = {
   </footer>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .footer {
-  margin-top: size(100);
   background: var(--brown-800);
   padding: 5rem 0;
+  margin-top: auto;
 
   &__grid {
     display: grid;
