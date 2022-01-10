@@ -1,5 +1,5 @@
 <script setup>
-import useProducts from '../../composables/useProducts.js';
+import useProducts from '@/composables/useProducts.js';
 
 const { categories } = useProducts();
 

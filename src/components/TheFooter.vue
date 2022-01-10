@@ -53,7 +53,7 @@ const footerItems = {
           </ul>
         </div>
         <div class="footer__logo desktop">
-          <img src="@/../assets/images/logo.png" alt="logo" />
+          <img src="/images/logo.png" alt="logo" />
         </div>
         <div class="footer__column right">
           <h4 class="footer__column-title">Kontakt</h4>

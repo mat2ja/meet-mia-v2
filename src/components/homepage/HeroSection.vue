@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="section-hero__image">
-      <img src="@/../assets/images/hero.png" alt="cake" draggable="false" />
+      <img src="/images/hero.png" alt="cake" draggable="false" />
     </div>
   </section>
 </template>
