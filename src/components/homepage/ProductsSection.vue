@@ -1,5 +1,4 @@
 <script setup>
-import { defineProps } from 'vue';
 import ProductCard from '@/components/products/ProductCard.vue';
 
 defineProps({
@@ -13,12 +12,7 @@ defineProps({
 <template>
   <section class="products-section">
     <div class="title-box row">
-      <box-icon
-        v-if="icon"
-        class="icon"
-        :name="icon.name"
-        :type="icon.type || ''"
-      />
+      <box-icon v-if="icon" class="icon" :name="icon.name" :type="icon.type || ''" />
       <h2>{{ title }}</h2>
     </div>
     <div
@@ -57,13 +51,13 @@ defineProps({
     fill: var(--burg-600-opaque);
     z-index: -1;
 
-    &[name='trending-up'] {
+    &[name="trending-up"] {
       left: -3rem;
       height: 160px;
       width: 160px;
       transform: translateY(0.5rem);
     }
-    &[name='discount'] {
+    &[name="discount"] {
       height: 120px;
       width: 120px;
       left: -2rem;

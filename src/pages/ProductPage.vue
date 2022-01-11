@@ -1,6 +1,4 @@
 <script setup>
-import { useRoute } from 'vue-router';
-import { ref } from 'vue';
 import useProducts from '@/composables/useProducts.js';
 
 const route = useRoute();

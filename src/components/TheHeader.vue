@@ -1,10 +1,14 @@
 <script setup>
-import { ref } from 'vue';
 import NavDrawer from '@/components/nav/NavDrawer.vue';
 import HeaderLogo from '@/components/nav/HeaderLogo.vue';
 import useNavDrawer from '@/composables/useNavDrawer.js';
+import { useWindowScroll } from '@vueuse/core'
 
 const { openNavDrawer } = useNavDrawer();
+
+
+const { y } = useWindowScroll()
+
 
 const categoryBarOpen = ref(false);
 const toggleCategoryBar = () => {
@@ -15,14 +19,11 @@ const toggleCategoryBar = () => {
 <template>
   <div
     class="container header__wrapper"
-    :class="{ 'full-color': categoryBarOpen }"
+    :class="{ 'full-color': categoryBarOpen, colored: y > 120 }"
   >
     <div class="row">
       <header class="header">
-        <div
-          class="header__hamburger icon__wrapper left tablet"
-          @click="openNavDrawer"
-        >
+        <div class="header__hamburger icon__wrapper left tablet" @click="openNavDrawer">
           <box-icon class="icon" size="md" name="menu-alt-left" />
         </div>
         <HeaderLogo />
@@ -58,10 +59,7 @@ const toggleCategoryBar = () => {
             </li>
           </ul>
 
-          <div
-            class="nav__category-bar category-bar desktop"
-            v-show="categoryBarOpen"
-          >
+          <div class="nav__category-bar category-bar desktop" v-show="categoryBarOpen">
             <div class="row">
               <nav class="category-bar__nav">
                 <ul class="category-bar__list">
@@ -107,9 +105,9 @@ const toggleCategoryBar = () => {
   width: 100%;
 
   &__wrapper {
-    // background: rgba(255, 225, 214, 0.2);
-    background: hsla(16, 100%, 82%, 0.3);
-    backdrop-filter: blur(8px);
+    transition: all 250ms ease-in-out;
+
+    background: transparent;
     position: fixed;
     top: 0;
     left: 0;
@@ -118,6 +116,13 @@ const toggleCategoryBar = () => {
     // TODO
     // background: var(--peach-500);
     // background: var(--peach-200);
+
+    &.colored {
+      background: hsla(16, 100%, 82%, 0.3);
+      backdrop-filter: blur(8px);
+      box-shadow: var(--box-shadow-peach);
+      box-shadow: 0 2px 6px hsla(16, 100%, 82%, 0.3);
+    }
 
     &.full-color {
       // background: var(--peach-500);
@@ -236,5 +241,4 @@ const toggleCategoryBar = () => {
     }
   }
 }
-
 </style>

@@ -1,12 +1,10 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { useElementBounding } from '@vueuse/core';
 
 import ProductsSection from '@/components/homepage/ProductsSection.vue';
 import CategoriesSection from '@/components/homepage/CategoriesSection.vue';
 import HeroSection from '@/components/homepage/HeroSection.vue';
 import useProducts from '@/composables/useProducts.js';
-
-const offset = ref(0);
 
 const { getRandomProducts } = useProducts();
 
@@ -23,24 +21,12 @@ const productsSections = [
   },
 ];
 
-const calculateRowOffset = () => {
-  const [row] = [...document.querySelectorAll('.row')];
-  offset.value = `${row?.getBoundingClientRect().left || 0}`;
-};
-
-calculateRowOffset();
-
-onMounted(() => {
-  window.addEventListener('resize', calculateRowOffset);
-});
-
-onBeforeUnmount(() => {
-  window.removeEventListener('resize', calculateRowOffset);
-});
+const heroRow = ref(null);
+const { left } = useElementBounding(heroRow);
 </script>
 
 <template>
-  <HeroSection />
+  <HeroSection ref="heroRow" />
 
   <ProductsSection
     v-for="(section, i) in productsSections"
@@ -48,9 +34,8 @@ onBeforeUnmount(() => {
     :title="section.title"
     :items="section.items"
     :icon="section.icon"
-    :offset="offset"
+    :offset="left"
   />
-   
 
   <CategoriesSection />
 </template>
