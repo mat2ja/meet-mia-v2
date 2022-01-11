@@ -49,6 +49,11 @@ body {
   background-size: contain;
 }
 
+::selection {
+  color: var(--brown-900);
+  background: var(--peach-200);
+}
+
 ::-webkit-scrollbar {
   width: 6px;
 }
