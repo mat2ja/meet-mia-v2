@@ -30,7 +30,7 @@ import TheHeader from '@/components/TheHeader.vue';
 html {
   box-sizing: border-box;
   // overscroll-behavior-y: contain;
-  scrollbar-width: thin;
+  scrollbar-color: var(--peach-600) var(--peach-100);
 }
 
 body {
@@ -47,6 +47,21 @@ body {
   // background-position: top right;
   // background-size: cover;
   background-size: contain;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: var(--peach-100);
+  padding: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--peach-600);
 }
 
 #app {
