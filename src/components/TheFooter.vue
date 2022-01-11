@@ -26,69 +26,80 @@ const footerItems = {
 
 <template>
   <footer class="footer">
-    <div class="row">
-      <div class="footer__grid">
-        <div class="footer__column">
-          <h4 class="footer__column-title">Navigacija</h4>
-          <ul class="footer__list">
-            <li
-              class="footer__list-item"
-              v-for="item in footerItems.navigacija"
-              :key="item.label"
-            >
-              <a href="#" class="footer_link">{{ item.label }}</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer__column desktop">
-          <h4 class="footer__column-title">Lokacija</h4>
-          <ul class="footer__list">
-            <li
-              class="footer__list-item"
-              v-for="item in footerItems.lokacija"
-              :key="item.label"
-            >
-              <a href="#" class="footer_link">{{ item.label }}</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer__logo desktop">
-          <img src="/images/logo.png" alt="logo" />
-        </div>
-        <div class="footer__column right">
-          <h4 class="footer__column-title">Kontakt</h4>
-          <ul class="footer__list">
-            <li
-              class="footer__list-item"
-              v-for="item in footerItems.kontakt"
-              :key="item.label"
-            >
-              <a href="#" class="footer_link">{{ item.label }}</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer__column right">
-          <h4 class="footer__column-title">Info</h4>
-          <ul class="footer__list">
-            <li
-              class="footer__list-item"
-              v-for="item in footerItems.info"
-              :key="item.label"
-            >
-              <a href="#" class="footer_link">{{ item.label }}</a>
-            </li>
-          </ul>
-        </div>
+    <div class="footer__top">
+      <div class="row">
+        <section class="footer__grid">
+          <div class="footer__column">
+            <h4 class="footer__column-title">Navigacija</h4>
+            <ul class="footer__list">
+              <li
+                class="footer__list-item"
+                v-for="item in footerItems.navigacija"
+                :key="item.label"
+              >
+                <a href="#" class="footer_link">{{ item.label }}</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__column desktop">
+            <h4 class="footer__column-title">Lokacija</h4>
+            <ul class="footer__list">
+              <li class="footer__list-item" v-for="item in footerItems.lokacija" :key="item.label">
+                <a href="#" class="footer_link">{{ item.label }}</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__logo desktop">
+            <img src="/images/logo.png" alt="logo" />
+          </div>
+          <div class="footer__column right">
+            <h4 class="footer__column-title">Kontakt</h4>
+            <ul class="footer__list">
+              <li class="footer__list-item" v-for="item in footerItems.kontakt" :key="item.label">
+                <a href="#" class="footer_link">{{ item.label }}</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__column right">
+            <h4 class="footer__column-title">Info</h4>
+            <ul class="footer__list">
+              <li class="footer__list-item" v-for="item in footerItems.info" :key="item.label">
+                <a href="#" class="footer_link">{{ item.label }}</a>
+              </li>
+            </ul>
+          </div>
+        </section>
       </div>
     </div>
+    <section class="footer__bottom">
+      <div class="row">
+        <div class="footer__bottom-content">
+          <p class="footer__copyright">©2021 Meet Mia®, Site by Matija Osrečki</p>
+          <div class="footer__socials">
+            <a href="#" class="footer__social-link">
+              <box-icon class="icon" size="lg" name="trip-advisor" type="logo"></box-icon>
+            </a>
+            <a href="#" class="footer__social-link">
+              <box-icon class="icon" size="lg" name="instagram-alt" type="logo"></box-icon>
+            </a>
+            <a href="#" class="footer__social-link">
+              <box-icon class="icon" size="lg" name="facebook-circle" type="logo"></box-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   </footer>
 </template>
 
 <style lang="scss" scoped>
 .footer {
   background: var(--brown-800);
-  padding: 5rem 0;
   margin-top: auto;
+
+  &__top {
+    padding: 5rem 0;
+  }
 
   &__grid {
     display: grid;
@@ -128,7 +139,7 @@ const footerItems = {
   &__column-title {
     font-family: var(--font-primary);
     text-transform: uppercase;
-    color: var(--peach-300);
+    color: var(--peach-400);
     font-size: var(--text-md);
     margin-bottom: 0.75rem;
   }
@@ -156,6 +167,43 @@ const footerItems = {
 
   &__link {
     display: block;
+  }
+
+  &__bottom {
+    color: var(--peach-20);
+    background: var(--brown-900);
+  }
+
+  &__bottom-content {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    font-weight: 500;
+    justify-content: space-between;
+    gap: 1rem;
+
+    @media only screen and (max-width: 600px) {
+      padding: 2rem 0;
+      flex-direction: column-reverse;
+      gap: 2rem;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 1.5rem;
+
+    .icon {
+      color: var(--peach-500);
+    }
+  }
+
+  &__social-link {
+    &:hover {
+      .icon {
+        color: var(--peach-200);
+      }
+    }
   }
 }
 </style>

@@ -14,7 +14,7 @@ import TheHeader from '@/components/TheHeader.vue';
 </template>
 
 <style lang="scss">
-@import '../assets/styles/variables';
+@import "../assets/styles/variables";
 * {
   margin: 0;
   padding: 0;
@@ -30,6 +30,7 @@ import TheHeader from '@/components/TheHeader.vue';
 html {
   box-sizing: border-box;
   // overscroll-behavior-y: contain;
+  scrollbar-width: thin;
 }
 
 body {
@@ -113,6 +114,7 @@ button {
 .icon {
   color: currentColor;
   fill: currentColor;
+  transition: all 250ms ease-out;
 }
 
 .btn {
