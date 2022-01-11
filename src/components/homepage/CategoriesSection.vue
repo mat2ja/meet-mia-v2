@@ -74,6 +74,7 @@ const imageImport = (filename) => `url(./images/${filename}.jpg)`;
   }
 
   &__title {
+    font-family: var(--font-primary);
     text-transform: uppercase;
     display: flex;
     align-items: center;
@@ -81,7 +82,7 @@ const imageImport = (filename) => `url(./images/${filename}.jpg)`;
     writing-mode: vertical-lr;
     font-size: var(--text-7xl);
     color: var(--burg-500-opaque);
-    padding: 0 3rem;
+    padding: 0 4rem;
 
     @media only screen and (max-width: 1000px) {
       writing-mode: initial;
@@ -136,6 +137,7 @@ const imageImport = (filename) => `url(./images/${filename}.jpg)`;
   }
 
   &__label {
+    font-family: var(--font-primary);
     text-align: right;
     padding: 1rem 1.2rem;
     background: var(--white-opaque);

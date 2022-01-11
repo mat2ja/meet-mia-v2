@@ -10,11 +10,7 @@ export default defineConfig({
   plugins: [
     vue(),
     AutoImport({
-      imports: [
-        // presets
-        'vue',
-        'vue-router',
-      ],
+      imports: ['vue', 'vue-router'],
     }),
     ViteFonts({
       google: {

@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@vueuse/core": "^7.5.3",
+    "@vueuse/router": "^7.5.3",
     "boxicons": "^2.1.1",
     "lodash": "^4.17.21",
     "vite-plugin-fonts": "^0.2.2",

@@ -50,7 +50,7 @@ const footerItems = {
             </ul>
           </div>
           <div class="footer__logo desktop">
-            <img src="/images/logo.png" alt="logo" />
+            <img src="/images/logo-2.png" alt="logo" />
           </div>
           <div class="footer__column right">
             <h4 class="footer__column-title">Kontakt</h4>
@@ -191,7 +191,7 @@ const footerItems = {
 
   &__socials {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
 
     .icon {
       color: var(--peach-500);

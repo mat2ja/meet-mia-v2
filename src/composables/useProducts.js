@@ -95,13 +95,13 @@ export default () => {
     return sampleSize(products.value, size);
   };
 
-  const getProduct = (id) => {
+  const getProductById = (id) => {
     return products.value.find((product) => product.id === id) ?? null;
   };
   return {
     products,
     categories,
     getRandomProducts,
-    getProduct,
+    getProductById,
   };
 };

@@ -6,11 +6,9 @@
   --peach-200: #ffd4c4;
   --peach-300: #fbc5b1; // ovo sam ja dodo
   --peach-400: #ffbca3; // bivsa 300
-  --peach-500: #f6b094; // logo color
+  --peach-500: #f6b094; // logo color - NEMA BOJU
   --peach-600: #d4947d;
   --peach-700: #a8715d;
-  // --peach-800: #;
-  // --peach-900: #;
 
   --burg-200: #f3c8c8;
   --burg-500: #d68585;
@@ -28,7 +26,9 @@
 
   --white-opaque: hsla(0, 0%, 100%, 0.25);
 
-  --border-radius: 4px;
+  --border-radius-lg: 8px;
+  --border-radius: 6px;
+  --border-radius-sm: 4px;
 
   --text-xs: 12px;
   --text-sm: 14px;
@@ -47,7 +47,8 @@
   --font-display: 'BioRhyme', serif;
   --font-primary: 'Dosis', sans-serif;
 
-  --nav-height: 70px;
+  --nav-height: 60px;
+  --row-width: 1600px;
 
   --box-shadow-peach: 0 8px 20px 2px hsla(16, 100%, 82%, 0.3);
 }

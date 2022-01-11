@@ -14,7 +14,7 @@ import TheHeader from '@/components/TheHeader.vue';
 </template>
 
 <style lang="scss">
-@import "../assets/styles/variables";
+@import '../assets/styles/variables';
 * {
   margin: 0;
   padding: 0;
@@ -43,10 +43,10 @@ body {
   // background-image: url('./Rectangle439.svg');
   // background-image: url('./wickedbackground.svg');
   // background-image: url('./blob-scene-haikei.svg');
-  // background-repeat: no-repeat;
-  // background-position: top right;
-  // background-size: cover;
-  background-size: contain;
+  background-image: url('./Rectangle446.svg');
+  background-repeat: no-repeat;
+  background-position: -10vw -65vh;
+  background-size: 200%;
 }
 
 ::selection {
@@ -122,7 +122,7 @@ button {
 }
 
 .row {
-  max-width: 1440px;
+  max-width: var(--row-width);
   margin: 0 auto;
   padding: 0 1.5rem;
 }

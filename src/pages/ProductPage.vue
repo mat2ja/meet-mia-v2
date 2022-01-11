@@ -1,14 +1,13 @@
 <script setup>
 import useProducts from '@/composables/useProducts.js';
 
-const route = useRoute();
-const { getProduct } = useProducts();
+const { getProductById } = useProducts();
 
-const product = ref();
+const {
+  params: { productId },
+} = useRoute();
 
-const productId = route.params.id;
-
-product.value = getProduct(productId);
+const product = ref(getProductById(productId));
 </script>
 
 <template>
