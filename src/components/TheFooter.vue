@@ -104,6 +104,7 @@ const { footerItems } = useStore();
 .footer {
   background: var(--brown-800);
   margin-top: auto;
+  z-index: 20;
 
   &__top {
     padding: 5rem 0;

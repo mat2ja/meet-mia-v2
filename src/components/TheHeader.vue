@@ -14,7 +14,7 @@ const toggleCategoryBar = () => {
 <template>
   <div
     class="container header__wrapper"
-    :class="{ 'full-color': categoryBarOpen, colored: y > 1 }"
+    :class="{ colored: y > 1 || categoryBarOpen }"
   >
     <div class="row">
       <header class="header">
@@ -59,33 +59,35 @@ const toggleCategoryBar = () => {
             </li>
           </ul>
 
-          <div
-            class="nav__category-bar category-bar desktop"
-            v-show="categoryBarOpen"
-          >
-            <div class="row">
-              <nav class="category-bar__nav">
-                <ul class="category-bar__list">
-                  <li class="category-bar__item">
-                    <a href="#" class="category-bar__link">Kolači</a>
-                  </li>
-                  <li class="category-bar__item">
-                    <a href="#" class="category-bar__link">Torte</a>
-                  </li>
-                  <li class="category-bar__item">
-                    <a href="#" class="category-bar__link">Krosasani</a>
-                  </li>
-                  <li class="category-bar__item">
-                    <!-- TODO: not clickable becasue of image -->
-                    <a href="#" class="category-bar__link">Sendviči</a>
-                  </li>
-                  <li class="category-bar__item">
-                    <a href="#" class="category-bar__link">Ostalo</a>
-                  </li>
-                </ul>
-              </nav>
+          <transition name="fade">
+            <div
+              class="nav__category-bar category-bar desktop"
+              v-show="categoryBarOpen"
+            >
+              <div class="row">
+                <nav class="category-bar__nav">
+                  <ul class="category-bar__list">
+                    <li class="category-bar__item">
+                      <a href="#" class="category-bar__link">Kolači</a>
+                    </li>
+                    <li class="category-bar__item">
+                      <a href="#" class="category-bar__link">Torte</a>
+                    </li>
+                    <li class="category-bar__item">
+                      <a href="#" class="category-bar__link">Krosasani</a>
+                    </li>
+                    <li class="category-bar__item">
+                      <!-- TODO: not clickable becasue of image -->
+                      <a href="#" class="category-bar__link">Sendviči</a>
+                    </li>
+                    <li class="category-bar__item">
+                      <a href="#" class="category-bar__link">Ostalo</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
             </div>
-          </div>
+          </transition>
         </nav>
         <div class="header__hamburger icon__wrapper right tablet">
           <a href="/kosarica">
@@ -116,21 +118,11 @@ const toggleCategoryBar = () => {
     left: 0;
     width: 100%;
     z-index: 100;
-    // TODO
-    // background: var(--peach-500);
-    // background: var(--peach-200);
 
     &.colored {
       background: hsla(16, 100%, 82%, 0.3);
       backdrop-filter: blur(8px);
-      box-shadow: var(--box-shadow-peach);
-      box-shadow: 0 2px 6px hsla(16, 100%, 82%, 0.3);
-    }
-
-    &.full-color {
-      // background: var(--peach-500);
-      // background: var(--brown-900);
-      // color: var(--burg-500);
+      box-shadow: var(--box-shadow-peach-sm);
     }
   }
 
@@ -208,6 +200,7 @@ const toggleCategoryBar = () => {
     position: absolute;
     top: var(--nav-height);
     left: 0;
+    box-shadow: var(--box-shadow-peach-sm);
   }
 }
 

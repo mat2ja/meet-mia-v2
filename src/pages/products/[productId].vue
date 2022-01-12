@@ -3,20 +3,26 @@ import { useProducts } from '@/stores/products.js';
 
 const { getProductById, getRandomProducts } = useProducts();
 
-const { params } = useRoute();
-
-const product = ref(getProductById(params.productId));
+const route = useRoute();
+const {
+  params: { productId },
+} = route;
 
 const productRow = ref(null);
 const { left } = useElementBounding(productRow);
 
-// TODO: watch param id change
-watch(params, () => {});
+const product = ref(getProductById(productId));
+
+watch(
+  () => route.params.productId,
+  (newId) => {
+    product.value = getProductById(newId);
+  }
+);
 </script>
 
 <template>
   <div class="product-page">
-    <!-- :src="`/images/${'cover.jpg'}`" -->
     <img
       class="wrapper-img"
       :src="`/images/products/${product.imageUrl}`"
@@ -68,6 +74,7 @@ name: productPage
   height: 900px;
   max-width: 100vw;
   z-index: -1;
+  background: black;
   filter: opacity(0.15) saturate(0.5);
 }
 .row-wrapper {
@@ -89,7 +96,7 @@ name: productPage
   display: grid;
   align-items: center;
   grid-template-columns: repeat(12, 1fr);
-  gap: 1rem;
+  gap: 2rem;
 
   &__image {
     flex: 1;

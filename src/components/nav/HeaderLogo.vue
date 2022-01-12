@@ -15,6 +15,7 @@
     max-height: 100%;
     height: var(--nav-height);
     user-select: none;
+    display: block;
   }
 }
 </style>

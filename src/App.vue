@@ -37,13 +37,6 @@ body {
   line-height: 1.5;
   font-weight: 400;
   overflow-x: hidden;
-  // background-image: url('./Rectangle439.svg');
-  // background-image: url('./wickedbackground.svg');
-  // background-image: url('./blob-scene-haikei.svg');
-  background-image: url('./Rectangle446.svg');
-  background-repeat: no-repeat;
-  background-position: -10vw -65vh;
-  background-size: 200%;
 }
 
 ::selection {
@@ -64,6 +57,15 @@ body {
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background: var(--peach-600);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 250ms ease-in-out;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 
 #app {

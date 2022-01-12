@@ -6,7 +6,7 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
   scrollBehavior(to, from, savedPosition) {
-    return { left: 0, top: 0 };
+    return { left: 0, top: 0, behavior: 'smooth' };
   },
 });
 

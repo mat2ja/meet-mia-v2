@@ -8,6 +8,7 @@ const { left } = useElementBounding(heroRow);
 </script>
 
 <template>
+  <div class="homepage-wrapper"></div>
   <div class="homepage">
     <HeroSection ref="heroRow" />
 
@@ -25,6 +26,17 @@ const { left } = useElementBounding(heroRow);
 </template>
 
 <style lang="scss" scoped>
+.homepage-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background-image: url('./Rectangle446.svg');
+  background-repeat: no-repeat;
+  background-position: -10vw -65vh;
+  background-size: 200%;
+}
 .homepage {
   padding: 3rem 0 6rem;
 }
