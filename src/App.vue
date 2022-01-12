@@ -188,12 +188,12 @@ button {
 
 .main {
   margin-top: var(--nav-height);
-  padding-top: 2rem;
-  padding-bottom: 6rem;
-  margin-bottom: 4rem;
+  // padding-top: 2rem;
+  // padding-bottom: 6rem;
+  // margin-bottom: 4rem;
 
   @media only screen and(min-width: 800px) {
-    padding-top: 4rem;
+    // padding-top: 4rem;
   }
 }
 </style>

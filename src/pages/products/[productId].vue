@@ -1,31 +1,51 @@
 <script setup>
 import { useProducts } from '@/stores/products.js';
 
-const { getProductById } = useProducts();
+const { getProductById, getRandomProducts } = useProducts();
 
 const { params } = useRoute();
 
 const product = ref(getProductById(params.productId));
+
+const productRow = ref(null);
+const { left } = useElementBounding(productRow);
+
+// TODO: watch param id change
+watch(params, () => {});
 </script>
 
 <template>
-  <!-- :src="`/images/${'cover.jpg'}`" -->
-  <img
-    class="wrapper-img"
-    :src="`/images/products/${product.imageUrl}`"
-    alt="Product image"
-  />
-  <div class="row-wrapper">
-    <div class="row">
-      <div class="product-overview">
-        <div class="product-overview__image">
-          <img
-            :src="`/images/products/${product.imageUrl}`"
-            alt="Product image"
-          />
+  <div class="product-page">
+    <!-- :src="`/images/${'cover.jpg'}`" -->
+    <img
+      class="wrapper-img"
+      :src="`/images/products/${product.imageUrl}`"
+      alt="Product image"
+    />
+    <div class="row-wrapper row-wrapper--overview">
+      <div class="row" ref="productRow">
+        <div class="product-overview">
+          <div class="product-overview__image">
+            <img
+              :src="`/images/products/${product.imageUrl}`"
+              alt="Product image"
+            />
+          </div>
+          <ProductInfo :item="product" class="product-overview__info" />
         </div>
-        <ProductInfo :item="product" class="product-overview__info" />
       </div>
+    </div>
+    <div class="row-wrapper row-wrapper--products">
+      <div class="row">
+        <h3>Slični proizvodi</h3>
+      </div>
+      <ProductGrid
+        :items="getRandomProducts(8)"
+        :style="{
+          paddingLeft: `${left}px`,
+          paddingRight: `${left}px`,
+        }"
+      />
     </div>
   </div>
 </template>
@@ -35,6 +55,9 @@ name: productPage
 </route>
 
 <style lang="scss" scoped>
+.product-page {
+  padding: 5rem 0 0;
+}
 .wrapper-img {
   object-fit: cover;
   position: absolute;
@@ -48,7 +71,19 @@ name: productPage
   filter: opacity(0.15) saturate(0.5);
 }
 .row-wrapper {
-  padding: 3rem 0;
+  &--overview {
+    padding-bottom: 8rem;
+  }
+
+  &--products {
+    padding: 5rem 0 5rem;
+    background: var(--peach-300);
+
+    h3 {
+      font-size: var(--text-4xl);
+      margin-bottom: 2rem;
+    }
+  }
 }
 .product-overview {
   display: grid;

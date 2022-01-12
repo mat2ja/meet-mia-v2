@@ -70,6 +70,7 @@ defineProps({
 
   &__crumbs {
     margin-top: -0.5rem;
+    color: var(--burg-700-opaque);
   }
 
   &__categories {

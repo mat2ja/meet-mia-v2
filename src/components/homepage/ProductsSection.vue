@@ -18,15 +18,14 @@ defineProps({
       />
       <h2>{{ title }}</h2>
     </div>
-    <div
-      class="product-grid"
+    <ProductGrid
+      class="products-section__grid"
+      :items="items"
       :style="{
         paddingLeft: `${offset}px`,
         paddingRight: `${offset}px`,
       }"
-    >
-      <ProductCard v-for="item in items" :item="item" :key="item.id" />
-    </div>
+    />
   </section>
 </template>
 
@@ -68,37 +67,10 @@ defineProps({
   }
 }
 
-.product-grid {
-  margin-top: 2rem;
-  padding-bottom: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  // TODO: odreze sjenu
-  overflow-y: visible;
-  overflow-x: auto;
-  // overflow-x: visible;
-  flex-wrap: nowrap;
-  transition: padding-left 800ms ease-out;
-  margin-left: 0.5rem;
-
-  scrollbar-width: none;
-
-  &::-webkit-scrollbar {
-    width: 0.5rem; //only hide the vertical scrollbar
-    height: 0px; //only hide the horizontal scrollbar
-  }
-
-  &__wrapper {
-    padding: 1rem 0;
-    overflow-x: scroll;
-  }
-
-  @media only screen and(max-width: 800px) {
+.products-section {
+  &__grid {
     margin-top: 2rem;
   }
-
-  @media only screen and(max-width: 600px) {
-  }
 }
+
 </style>

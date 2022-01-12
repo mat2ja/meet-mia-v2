@@ -24,7 +24,9 @@ const toggleCategoryBar = () => {
         >
           <box-icon class="icon" size="md" name="menu-alt-left" />
         </div>
-        <HeaderLogo />
+        <RouterLink to="/" class="router-link">
+          <HeaderLogo />
+        </RouterLink>
         <nav class="nav desktop">
           <ul class="nav__list nav__list--left">
             <li class="nav__item">

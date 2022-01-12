@@ -5,6 +5,7 @@ export const useStore = defineStore('main', {
     return {
       footerItems: {
         navigacija: [
+          { label: 'Naslovnica' },
           { label: 'Ponuda' },
           { label: 'O nama' },
           { label: 'Blog' },
