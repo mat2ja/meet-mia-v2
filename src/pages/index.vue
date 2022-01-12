@@ -32,10 +32,13 @@ const { left } = useElementBounding(heroRow);
   bottom: 0;
   right: 0;
   width: 100%;
-  background-image: url('./Rectangle446.svg');
+  height: 100%;
+  z-index: -1;
+
   background-repeat: no-repeat;
-  background-position: -10vw -65vh;
-  background-size: 200%;
+  background-position: 56px -60px, -50px -40%;
+  background-size: 40%, 200%;
+  background-image: url('/blob-3.svg'), url('/Rectangle446.svg');
 }
 .homepage {
   padding: 3rem 0 6rem;
