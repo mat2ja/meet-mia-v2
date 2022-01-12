@@ -10,12 +10,21 @@
 .header-logo {
   height: 100%;
   overflow: hidden;
+  transition: all 250ms ease-out;
+
+  &:hover {
+    .header-logo--img {
+      filter: brightness(1.06);
+    }
+  }
 
   &--img {
     max-height: 100%;
     height: var(--nav-height);
     user-select: none;
     display: block;
+    transition: all 250ms ease-out;
+    transform: scale(1.4) translateY(2px);
   }
 }
 </style>

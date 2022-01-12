@@ -165,6 +165,7 @@ const toggleCategoryBar = () => {
     padding: 0.6rem 1.4rem;
     border-radius: var(--border-radius);
     cursor: pointer;
+    transition: all 250ms ease-out;
 
     .inner-icon {
       margin-left: 0.5rem;
