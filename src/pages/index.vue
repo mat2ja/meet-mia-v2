@@ -1,20 +1,7 @@
 <script setup>
 import { useProducts } from '@/stores/products.js';
 
-const { getRandomProducts } = useProducts();
-
-const productsSections = [
-  {
-    title: 'Popularno ovaj tjedan',
-    icon: { name: 'trending-up' },
-    items: getRandomProducts(10),
-  },
-  {
-    title: 'Posebna ponuda',
-    icon: { name: 'discount', type: 'solid' },
-    items: getRandomProducts(8),
-  },
-];
+const { getRandomProducts, productsSections } = useProducts();
 
 const heroRow = ref(null);
 const { left } = useElementBounding(heroRow);
@@ -27,7 +14,7 @@ const { left } = useElementBounding(heroRow);
     v-for="(section, i) in productsSections"
     :key="`${section.title}-${i}`"
     :title="section.title"
-    :items="section.items"
+    :items="getRandomProducts(section.itemCount)"
     :icon="section.icon"
     :offset="left"
   />

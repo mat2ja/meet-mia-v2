@@ -62,6 +62,18 @@ export const useProducts = defineStore('products', {
           imageUrl: 'meet-mia.avif',
         },
       ],
+      productsSections: [
+        {
+          title: 'Popularno ovaj tjedan',
+          icon: { name: 'trending-up' },
+          itemCount: 10,
+        },
+        {
+          title: 'Posebna ponuda',
+          icon: { name: 'discount', type: 'solid' },
+          itemCount: 8,
+        },
+      ],
     };
   },
   getters: {},
