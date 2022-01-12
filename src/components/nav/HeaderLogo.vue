@@ -16,8 +16,4 @@
     user-select: none;
   }
 }
-
-// a {
-//   display: inline !important;
-// }
 </style>

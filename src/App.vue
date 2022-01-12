@@ -1,7 +1,4 @@
-<script setup>
-import TheFooter from '@/components/TheFooter.vue';
-import TheHeader from '@/components/TheHeader.vue';
-</script>
+<script setup></script>
 
 <template>
   <TheHeader />
@@ -14,7 +11,7 @@ import TheHeader from '@/components/TheHeader.vue';
 </template>
 
 <style lang="scss">
-@import '../assets/styles/variables';
+@import '@/assets/styles/variables';
 * {
   margin: 0;
   padding: 0;

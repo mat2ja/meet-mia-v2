@@ -3,9 +3,7 @@ import useNavDrawer from '@/composables/useNavDrawer.js';
 
 const { openNavDrawer } = useNavDrawer();
 
-
-const { y } = useWindowScroll()
-
+const { y } = useWindowScroll();
 
 const categoryBarOpen = ref(false);
 const toggleCategoryBar = () => {
@@ -20,7 +18,10 @@ const toggleCategoryBar = () => {
   >
     <div class="row">
       <header class="header">
-        <div class="header__hamburger icon__wrapper left tablet" @click="openNavDrawer">
+        <div
+          class="header__hamburger icon__wrapper left tablet"
+          @click="openNavDrawer"
+        >
           <box-icon class="icon" size="md" name="menu-alt-left" />
         </div>
         <HeaderLogo />
@@ -56,7 +57,10 @@ const toggleCategoryBar = () => {
             </li>
           </ul>
 
-          <div class="nav__category-bar category-bar desktop" v-show="categoryBarOpen">
+          <div
+            class="nav__category-bar category-bar desktop"
+            v-show="categoryBarOpen"
+          >
             <div class="row">
               <nav class="category-bar__nav">
                 <ul class="category-bar__list">

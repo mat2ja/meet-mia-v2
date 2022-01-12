@@ -1,27 +1,6 @@
 <script setup>
-const footerItems = {
-  navigacija: [
-    { label: 'Ponuda' },
-    { label: 'O nama' },
-    { label: 'Blog' },
-    { label: 'Kontakt' },
-    { label: 'Košarica' },
-    { label: 'Korisnički profil' },
-  ],
-  lokacija: [
-    { label: 'Vlaška ul. 43, 10000 Zagreb' },
-    { label: 'Pondjeljak - Petak' },
-    { label: '8:00 - 21:00' },
-  ],
-  kontakt: [{ label: 'info@meetmia.hr' }, { label: '+385 91 445 5122' }],
-  info: [
-    { label: 'FAQ' },
-    { label: 'Plaćanje' },
-    { label: 'Dostava' },
-    { label: 'Povrati' },
-    { label: 'Uvjeti korištenja' },
-  ],
-};
+import { useStore } from '@/stores/index.js';
+const { footerItems } = useStore();
 </script>
 
 <template>
@@ -44,7 +23,11 @@ const footerItems = {
           <div class="footer__column desktop">
             <h4 class="footer__column-title">Lokacija</h4>
             <ul class="footer__list">
-              <li class="footer__list-item" v-for="item in footerItems.lokacija" :key="item.label">
+              <li
+                class="footer__list-item"
+                v-for="item in footerItems.lokacija"
+                :key="item.label"
+              >
                 <a href="#" class="footer_link">{{ item.label }}</a>
               </li>
             </ul>
@@ -55,7 +38,11 @@ const footerItems = {
           <div class="footer__column right">
             <h4 class="footer__column-title">Kontakt</h4>
             <ul class="footer__list">
-              <li class="footer__list-item" v-for="item in footerItems.kontakt" :key="item.label">
+              <li
+                class="footer__list-item"
+                v-for="item in footerItems.kontakt"
+                :key="item.label"
+              >
                 <a href="#" class="footer_link">{{ item.label }}</a>
               </li>
             </ul>
@@ -63,7 +50,11 @@ const footerItems = {
           <div class="footer__column right">
             <h4 class="footer__column-title">Info</h4>
             <ul class="footer__list">
-              <li class="footer__list-item" v-for="item in footerItems.info" :key="item.label">
+              <li
+                class="footer__list-item"
+                v-for="item in footerItems.info"
+                :key="item.label"
+              >
                 <a href="#" class="footer_link">{{ item.label }}</a>
               </li>
             </ul>
@@ -74,16 +65,33 @@ const footerItems = {
     <section class="footer__bottom">
       <div class="row">
         <div class="footer__bottom-content">
-          <p class="footer__copyright">©2021 Meet Mia®, Site by Matija Osrečki</p>
+          <p class="footer__copyright">
+            ©2021 Meet Mia®, Site by Matija Osrečki
+          </p>
           <div class="footer__socials">
             <a href="#" class="footer__social-link">
-              <box-icon class="icon" size="lg" name="trip-advisor" type="logo"></box-icon>
+              <box-icon
+                class="icon"
+                size="lg"
+                name="trip-advisor"
+                type="logo"
+              ></box-icon>
             </a>
             <a href="#" class="footer__social-link">
-              <box-icon class="icon" size="lg" name="instagram-alt" type="logo"></box-icon>
+              <box-icon
+                class="icon"
+                size="lg"
+                name="instagram-alt"
+                type="logo"
+              ></box-icon>
             </a>
             <a href="#" class="footer__social-link">
-              <box-icon class="icon" size="lg" name="facebook-circle" type="logo"></box-icon>
+              <box-icon
+                class="icon"
+                size="lg"
+                name="facebook-circle"
+                type="logo"
+              ></box-icon>
             </a>
           </div>
         </div>
