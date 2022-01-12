@@ -36,13 +36,17 @@ defineProps({
 .product-info {
   position: relative;
   background: var(--peach-200);
-  padding: 1rem 1.25rem;
+  padding: 0 1.5rem 0;
   border-radius: var(--border-radius-lg);
+  box-shadow: var(--box-shadow-peach);
 
   .product-info--inner {
-    padding: 1.25rem 1.5rem;
-    border: 4px dashed var(--burg-600-opaque);
-    border-radius: var(--border-radius-lg);
+    padding: 2.5rem 1.75rem;
+    border: 4px dashed var(--burg-500-opaque);
+    border-top: none;
+    border-bottom: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 
   &__content {

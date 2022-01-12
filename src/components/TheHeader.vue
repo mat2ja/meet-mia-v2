@@ -14,7 +14,7 @@ const toggleCategoryBar = () => {
 <template>
   <div
     class="container header__wrapper"
-    :class="{ 'full-color': categoryBarOpen, colored: y > 120 }"
+    :class="{ 'full-color': categoryBarOpen, colored: y > 1 }"
   >
     <div class="row">
       <header class="header">
