@@ -2,9 +2,7 @@
 
 <template>
   <div class="header-logo">
-    <!-- <RouterLink :to="{ name: 'home' }"> -->
     <img src="/images/logo.png" alt="Logo" class="header-logo--img" />
-    <!-- </RouterLink> -->
   </div>
 </template>
 

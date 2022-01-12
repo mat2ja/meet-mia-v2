@@ -11,6 +11,7 @@
     "@vueuse/router": "^7.5.3",
     "boxicons": "^2.1.1",
     "lodash": "^4.17.21",
+    "pinia": "^2.0.9",
     "vite-plugin-fonts": "^0.2.2",
     "vue": "^3.2.25",
     "vue-router": "^4.0.12"
@@ -20,6 +21,8 @@
     "nanoid": "^3.1.30",
     "sass": "^1.47.0",
     "unplugin-auto-import": "^0.5.9",
-    "vite": "^2.7.2"
+    "unplugin-vue-components": "^0.17.11",
+    "vite": "^2.7.2",
+    "vite-plugin-pages": "^0.19.9"
   }
 }

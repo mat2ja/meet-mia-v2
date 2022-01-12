@@ -1,7 +1,7 @@
 <script setup>
-import useProducts from '@/composables/useProducts.js';
+import { useCategories } from '@/stores/categories.js';
 
-const { categories } = useProducts();
+const { categories } = useCategories();
 
 const imageImport = (filename) => `url(./images/${filename}.jpg)`;
 </script>

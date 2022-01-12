@@ -1,10 +1,5 @@
 <script setup>
-import { useElementBounding } from '@vueuse/core';
-
-import ProductsSection from '@/components/homepage/ProductsSection.vue';
-import CategoriesSection from '@/components/homepage/CategoriesSection.vue';
-import HeroSection from '@/components/homepage/HeroSection.vue';
-import useProducts from '@/composables/useProducts.js';
+import { useProducts } from '@/stores/products.js';
 
 const { getRandomProducts } = useProducts();
 

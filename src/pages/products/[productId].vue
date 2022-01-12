@@ -1,13 +1,11 @@
 <script setup>
-import useProducts from '@/composables/useProducts.js';
+import { useProducts } from '@/stores/products.js';
 
 const { getProductById } = useProducts();
 
-const {
-  params: { productId },
-} = useRoute();
+const { params } = useRoute();
 
-const product = ref(getProductById(productId));
+const product = ref(getProductById(params.productId));
 </script>
 
 <template>
@@ -15,5 +13,9 @@ const product = ref(getProductById(productId));
     <pre v-if="product">{{ product }}</pre>
   </div>
 </template>
+
+<route lang="yaml">
+name: productPage
+</route>
 
 <style lang="scss" scoped></style>

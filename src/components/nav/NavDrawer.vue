@@ -1,5 +1,4 @@
 <script setup>
-import HeaderLogo from '@/components/nav/HeaderLogo.vue';
 import useNavDrawer from '@/composables/useNavDrawer.js';
 
 const {

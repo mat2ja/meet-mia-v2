@@ -6,7 +6,7 @@ defineProps({
 
 <template>
   <div class="product-card">
-    <RouterLink :to="{ name: 'product', params: { productId: item.id } }">
+    <RouterLink :to="{ name: 'productPage', params: { productId: item.id } }">
       <div class="product-card__image">
         <img :src="`./images/products/${item.imageUrl}`" alt="Product image" />
       </div>
