@@ -21,10 +21,7 @@ defineProps({
           </p>
         </div>
       </div>
-      <div class="product__price">
-        <span class="product__price--currency">HRK</span>
-        <span class="product__price--amount">{{ item.price }}</span>
-      </div>
+      <ProductPrice class="product__price" :price="item.price" />
       <div class="product__buttons">
         <button class="btn btn--primary">Dodaj u košaricu</button>
       </div>
@@ -85,6 +82,7 @@ defineProps({
       }
     }
 
+    // TODO
     &__price {
       display: flex;
       justify-content: flex-end;
