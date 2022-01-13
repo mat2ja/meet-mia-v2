@@ -132,6 +132,7 @@ name: productPage
     padding: 1.5rem;
 
     background-image: v-bind(bgPattern);
+    box-shadow: var(--box-shadow-peach);
 
     img {
       transform: rotate(-2deg) scale(0.95);
@@ -142,6 +143,7 @@ name: productPage
       object-fit: cover;
       object-position: center;
       border-radius: var(--border-radius-lg);
+      box-shadow: var(--box-shadow-peach);
 
       &:hover {
         transform: rotate(0deg);

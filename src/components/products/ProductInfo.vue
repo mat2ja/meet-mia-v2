@@ -56,22 +56,25 @@ const addProduct = () => {
 <style lang="scss" scoped>
 .product-info {
   position: relative;
-  padding-left: 3rem;
+  // padding-left: 3rem;
   border-radius: var(--border-radius-lg);
   box-shadow: var(--box-shadow-peach);
 
   background: var(--peach-200);
-
   background-image: v-bind(bgPattern);
+  transform: rotate(1deg);
 
   .product-info--inner {
     padding: 2.5rem 3rem 2rem 2.5rem;
     background: var(--peach-200);
+    transform: translateY(2rem) translateX(1.5rem) rotate(-1deg);
+    box-shadow: var(--box-shadow-peach);
 
-    border-top: none;
-    border-bottom: none;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    // border-top: none;
+    // border-bottom: none;
+    // border-top-left-radius: 0;
+    // border-top-right-radius: 0
+    border-radius: var(--border-radius-lg);
   }
 
   &__content {
@@ -125,7 +128,6 @@ const addProduct = () => {
     left: 2rem;
     display: flex;
     gap: 0.25rem;
-    margin-left: 3.5rem;
   }
 }
 </style>
