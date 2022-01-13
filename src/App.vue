@@ -43,7 +43,7 @@ body {
 
 ::selection {
   color: var(--brown-900);
-  background: var(--peach-200);
+  background: var(--peach-300);
 }
 
 ::-webkit-scrollbar {

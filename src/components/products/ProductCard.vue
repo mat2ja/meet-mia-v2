@@ -44,7 +44,7 @@ defineProps({
   box-shadow: var(--box-shadow-peach);
 
   transform: rotate(0deg) scale(1);
-  transition: all 400ms cubic-bezier(0.26, 0.22, 0.27, 1.45);
+  transition: all 200ms cubic-bezier(0.26, 0.22, 0.27, 1.45);
 
   &:hover {
     outline: 3px dashed transparent;
@@ -53,7 +53,6 @@ defineProps({
   }
 
   &:hover {
-    // transform: rotate(-2deg);
     z-index: 10;
     box-shadow: var(--box-shadow-peach-sm);
     outline-color: var(--peach-600);
@@ -80,6 +79,7 @@ defineProps({
       img {
         transition: all 200ms ease-out;
         display: block;
+        transform: scale(1.1);
       }
     }
 
