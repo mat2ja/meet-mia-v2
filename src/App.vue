@@ -139,7 +139,7 @@ button {
 }
 
 .btn {
-  padding: 0.85em 2.2em;
+  padding: 1em 2.2em;
   text-transform: uppercase;
   border: none;
   border-radius: var(--border-radius);

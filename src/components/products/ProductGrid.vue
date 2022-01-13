@@ -12,7 +12,7 @@ defineProps({
 
 <style lang="scss" scoped>
 .product-grid {
-  padding-bottom: 2rem;
+  padding: 2rem 0;
   display: flex;
   align-items: center;
   gap: 1rem;

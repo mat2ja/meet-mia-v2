@@ -1,5 +1,5 @@
 <script setup>
-defineProps({
+const props = defineProps({
   size: String,
   price: Number | String,
 });
@@ -7,8 +7,12 @@ defineProps({
 
 <template>
   <div class="product-price">
-    <span class="product-price--currency">HRK</span>
-    <span class="product-price--amount">{{ price }}</span>
+    <span class="product-price--currency" :class="{ lg: props.size === 'lg' }">
+      HRK
+    </span>
+    <span class="product-price--amount" :class="{ lg: props.size === 'lg' }">
+      {{ price }}
+    </span>
   </div>
 </template>
 
@@ -22,7 +26,13 @@ defineProps({
     font-family: var(--font-primary);
     font-weight: 300;
     font-size: var(--text-3xl);
-    margin-right: 3px;
+    color: var(--burg-700-opaque);
+    margin-right: 5px;
+    margin-bottom: -2px;
+
+    &.lg {
+      font-size: var(--text-4xl);
+    }
 
     @media only screen and (max-width: 600px) {
       font-size: var(--text-lg);
@@ -33,6 +43,10 @@ defineProps({
     font-family: var(--font-display);
     font-weight: 600;
     font-size: var(--text-4xl);
+
+    &.lg {
+      font-size: var(--text-5xl);
+    }
 
     @media only screen and (max-width: 600px) {
       font-size: var(--text-2xl);

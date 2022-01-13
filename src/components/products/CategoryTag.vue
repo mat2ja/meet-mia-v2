@@ -22,5 +22,11 @@ defineProps({
   font-weight: bold;
   padding: 0.25rem 0.75rem;
   border-radius: var(--border-radius);
+
+  background: black;
+  color: white;
+  background: var(--burg-500-opaque);
+  backdrop-filter: blur(6px);
+  color: var(--burg-800);
 }
 </style>

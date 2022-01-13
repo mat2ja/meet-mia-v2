@@ -1,7 +1,10 @@
 <script setup>
 defineProps({
   item: Object,
+  bgPattern: String,
 });
+
+
 </script>
 
 <template>
@@ -20,8 +23,18 @@ defineProps({
         <p class="product-info__description">
           {{ item.description }}
         </p>
-        <div>
-          <ProductPrice :price="item.price" />
+        <div class="product-info__amount-bar">
+          <div class="product-info__cart-count">
+            <span class="product-info__cart-count--circle">
+              <span class="product-info__cart-count--amount">{{ 5 }}</span>
+            </span>
+            <p class="product-info__cart-count--text">već u košarici</p>
+          </div>
+          <ProductPrice
+            :price="item.price"
+            size="lg"
+            class="product-info__price"
+          />
         </div>
       </div>
       <div class="product-info__buttons">
@@ -35,14 +48,21 @@ defineProps({
 <style lang="scss" scoped>
 .product-info {
   position: relative;
-  background: var(--peach-200);
-  padding: 0 1.5rem 0;
+  // padding: 0 2rem 0;
+  padding-left: 3rem;
   border-radius: var(--border-radius-lg);
   box-shadow: var(--box-shadow-peach);
 
+  background: var(--peach-200);
+
+  // background-image: var(--bg-img-pattern-1);
+  background-image: v-bind(bgPattern);
+
   .product-info--inner {
-    padding: 2.5rem 1.75rem;
-    border: 4px dashed var(--burg-500-opaque);
+    padding: 2.5rem 3rem 2rem 2.5rem;
+    // border: 4px solid var(--burg-500-opaque);
+    background: var(--peach-200);
+
     border-top: none;
     border-bottom: none;
     border-top-left-radius: 0;
@@ -52,16 +72,59 @@ defineProps({
   &__content {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+  }
+
+  &__title {
+    font-size: var(--text-6xl);
+    margin-top: 0.4em;
+    margin-bottom: 0.5em;
   }
 
   &__description {
-    max-width: 50ch;
-    font-size: var(--text-lg);
+    max-width: 40ch;
+    font-size: var(--text-xl);
+  }
+
+  &__amount-bar {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__cart-count {
+    display: flex;
+    align-items: center;
+
+    &--circle {
+      width: 4rem;
+      height: 4rem;
+      display: grid;
+      place-content: center;
+      background: var(--peach-400);
+      border-radius: 100rem;
+    }
+
+    &--amount {
+      font-size: var(--text-4xl);
+      font-weight: 500;
+    }
+
+    &--text {
+      margin-left: 0.8em;
+      font-size: var(--text-lg);
+    }
+  }
+
+  &__cart-data {
+  }
+
+  &__price {
   }
 
   &__buttons {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     display: flex;
     justify-content: flex-end;
     gap: 0.5rem;
@@ -76,9 +139,10 @@ defineProps({
   &__categories {
     position: absolute;
     top: -1rem;
-    left: 3rem;
+    left: 2rem;
     display: flex;
     gap: 0.25rem;
+    margin-left: 3.5rem;
   }
 }
 </style>

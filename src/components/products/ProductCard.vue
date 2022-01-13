@@ -6,8 +6,11 @@ defineProps({
 
 <template>
   <div class="product-card">
-    <RouterLink :to="{ name: 'productPage', params: { productId: item.id } }">
-      <div class="product-card__image">
+    <RouterLink
+      :to="{ name: 'productPage', params: { productId: item.id } }"
+      class="product-card__link"
+    >
+      <div class="product__image">
         <img :src="`/images/products/${item.imageUrl}`" alt="Product image" />
       </div>
     </RouterLink>
@@ -40,15 +43,46 @@ defineProps({
 
   box-shadow: var(--box-shadow-peach);
 
+  transform: rotate(0deg) scale(1);
+  transition: all 400ms cubic-bezier(0.26, 0.22, 0.27, 1.45);
+
+  &:hover {
+    outline: 3px dashed transparent;
+    outline-offset: 5px;
+    transform: scale(0.98);
+  }
+
+  &:hover {
+    // transform: rotate(-2deg);
+    z-index: 10;
+    box-shadow: var(--box-shadow-peach-sm);
+    outline-color: var(--peach-600);
+  }
+
   @media only screen and(max-width: 600px) {
     flex: 0 0 250px;
   }
 
   &__content {
-    padding: 1rem;
+    padding: 1.3rem 1rem 1rem;
+  }
+
+  &__link {
+    &:hover {
+      img {
+        filter: saturate(1.2) contrast(1.05) brightness(0.99);
+      }
+    }
   }
 
   .product {
+    &__image {
+      img {
+        transition: all 200ms ease-out;
+        display: block;
+      }
+    }
+
     &__info {
       margin-bottom: 0.5rem;
     }
