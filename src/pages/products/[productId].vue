@@ -3,22 +3,20 @@ import { useProducts } from '@/stores/products.js';
 
 const { getProductById, getRandomProducts } = useProducts();
 
+// TODO: learn why route cant destructure
 const route = useRoute();
-const {
-  params: { productId },
-} = route;
 
 const productRow = ref(null);
 const { left } = useElementBounding(productRow);
 
-const product = ref(getProductById(productId));
+const product = ref();
 
-watch(
-  () => route.params.productId,
-  (newId) => {
-    product.value = getProductById(newId);
-  }
-);
+watchEffect(() => {
+  const {
+    params: { productId },
+  } = route;
+  product.value = getProductById(productId);
+});
 </script>
 
 <template>
