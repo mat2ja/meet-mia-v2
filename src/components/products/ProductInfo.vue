@@ -1,11 +1,16 @@
 <script setup>
-defineProps({
+import { useCategories } from '@/stores/categories.js';
+
+const props = defineProps({
   item: Object,
   bgPattern: String,
 });
 
-const productCount = ref(0);
+const { getCategoryTags } = useCategories();
 
+const fullTags = getCategoryTags(props.item.tags);
+
+const productCount = ref(0);
 const addProduct = () => {
   if (productCount.value < 50) {
     productCount.value += 1;
@@ -19,9 +24,9 @@ const addProduct = () => {
       <div class="product-info__content">
         <div class="product-info__categories">
           <CategoryTag
-            :name="name"
-            v-for="(name, i) in ['kolači', 'slatko', 'popularno']"
-            :key="i"
+            :name="tag.label"
+            v-for="tag in fullTags"
+            :key="tag.id"
           />
         </div>
         <p class="product-info__crumbs">bez aditiva × 300g</p>

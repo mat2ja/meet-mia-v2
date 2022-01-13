@@ -4,16 +4,15 @@ import { random } from 'lodash';
 
 const { getProductById, getRandomProducts } = useProducts();
 
-const BG_COUNT = 5;
-
 const route = useRoute();
 
 const productRow = ref(null);
 const { left } = useElementBounding(productRow);
 
 const product = ref();
-const randN = ref();
 
+const BG_COUNT = 5;
+const randN = ref();
 const bgPattern = computed(() => `var(--bg-img-pattern-${randN.value})`);
 
 const genDifferentNumber = () => {
