@@ -38,7 +38,7 @@ const { left } = useElementBounding(heroRow);
   background-repeat: no-repeat;
   background-position: 56px -60px, -50px -40%;
   background-size: 40%, 200%;
-  background-image: url('/blob-3.svg'), url('/Rectangle446.svg');
+  background-image: url('@/assets/blob-3.svg'), url('@/assets/Rectangle446.svg');
 }
 .homepage {
   padding: 3rem 0 6rem;
