@@ -111,7 +111,15 @@ name: productPage
   display: grid;
   align-items: center;
   grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   gap: 2rem;
+
+  @media only screen and(max-width: 1000px) {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
 
   &__image {
     flex: 1;
