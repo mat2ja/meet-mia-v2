@@ -179,7 +179,6 @@ const toggleCategoryBar = () => {
       background: var(--peach-200);
 
       &:hover {
-        // TODO
         background: var(--peach-300);
       }
 
@@ -208,7 +207,6 @@ const toggleCategoryBar = () => {
 .category-bar {
   background: var(--brown-900);
   &__nav {
-    // z-index: 20;
     display: flex;
     align-items: center;
     justify-content: center;

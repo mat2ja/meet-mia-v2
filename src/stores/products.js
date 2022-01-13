@@ -86,7 +86,7 @@ export const useProducts = defineStore('products', {
             'Tortilja od slanutka, tapioke i špinata punjena humusom, dimljenim tofuom, salatom, rajčicom i tikvicama',
           price: '35.00',
           imageUrl: 'vege-wrap.avif',
-          tags: [2, 5, 8, 11],
+          tags: [2, 6, 8, 11],
         },
         {
           id: 'ads3',
@@ -112,7 +112,7 @@ export const useProducts = defineStore('products', {
           description: 'Eclair s kremom od badema, karamelom i slanim bademima',
           price: '30.00',
           imageUrl: 'more-eclair.avif',
-          tags: [],
+          tags: [1, 5, 8],
         },
         {
           id: 'EIRFLj',

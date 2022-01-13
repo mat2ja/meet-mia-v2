@@ -87,8 +87,6 @@ const {
 
 <style lang="scss" scoped>
 .nav-drawer {
-  // z-index: 100;
-  // background: peachpuff;
   background: var(--peach-200);
   height: 100vh;
   width: 100%;
@@ -153,8 +151,6 @@ const {
 .nav-drawer-dropdown {
   &__list {
     margin-bottom: 1rem;
-    // border-left: 4px solid var(--peach-400);
-    // padding-left: 1rem;
   }
 
   &__item {
