@@ -79,7 +79,9 @@ defineProps({
       img {
         transition: all 200ms ease-out;
         display: block;
-        transform: scale(1.1);
+      }
+
+      &:hover {
       }
     }
 
