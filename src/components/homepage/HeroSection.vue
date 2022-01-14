@@ -30,6 +30,7 @@
   @media only screen and(max-width: 800px) {
     grid-template-columns: repeat(4, 1fr);
   }
+
   @media only screen and(max-width: 600px) {
     padding-top: 2rem;
     padding-bottom: 4rem;
@@ -47,9 +48,10 @@
     }
 
     @media only screen and(max-width: 600px) {
-      // grid-column: 1 / span 1;
+      grid-column: 1 / -1;
       transform: translateY(0);
       width: fit-content;
+      padding: 2rem 0;
     }
   }
 
