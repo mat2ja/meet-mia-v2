@@ -2,7 +2,6 @@
 import { useProducts } from '@/stores/products.js';
 import { random } from 'lodash';
 
-// const { getProductById, getRandomProducts } = useProducts();
 const productsStore = useProducts();
 
 const route = useRoute();
@@ -130,7 +129,7 @@ name: productPage
     }
 
     @media only screen and(max-width: 1000px) {
-      padding-top: 10rem;
+      padding-top: 8rem;
     }
   }
 
@@ -158,7 +157,7 @@ name: productPage
     gap: 2rem;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 0;
+    padding-bottom: 2rem;
   }
 
   &__image {
