@@ -79,7 +79,11 @@ name: productPage
 
 <style lang="scss" scoped>
 .product-page {
-  padding: 5rem 0 0;
+  padding-top: 5rem;
+
+  @media only screen and(max-width: 1000px) {
+    padding-top: 3rem;
+  }
 }
 .wrapper-img {
   object-fit: cover;
@@ -96,6 +100,10 @@ name: productPage
 .row-wrapper {
   &--overview {
     padding-bottom: 8rem;
+
+    @media only screen and(max-width: 1000px) {
+      padding-bottom: 6rem;
+    }
   }
 
   &--products {
@@ -134,6 +142,10 @@ name: productPage
 
     background-image: v-bind(bgPattern);
     box-shadow: var(--box-shadow-peach);
+
+    @media only screen and (max-width: 600px) {
+      transform: scale(1.06);
+    }
 
     img {
       transform: rotate(-2deg) scale(0.95);

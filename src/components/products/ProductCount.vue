@@ -25,16 +25,30 @@ defineProps({
     place-content: center;
     background: var(--peach-400);
     border-radius: 100rem;
+    flex: 1 0;
+
+    @media only screen and (max-width: 800px) {
+      width: 3.25rem;
+      height: 3.25rem;
+    }
   }
 
   &__amount {
     font-size: var(--text-4xl);
     font-weight: 500;
+
+    @media only screen and (max-width: 800px) {
+      font-size: var(--text-3xl);
+    }
   }
 
   &__text {
     margin-left: 0.8em;
     font-size: var(--text-lg);
+
+    @media only screen and (max-width: 800px) {
+      display: none;
+    }
   }
 }
 </style>

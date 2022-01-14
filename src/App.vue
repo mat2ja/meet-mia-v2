@@ -119,7 +119,7 @@ button {
   color: inherit;
   cursor: pointer;
 
-  transition: all 200ms ease-out;
+  transition: all 250ms ease-out;
 }
 
 .row {

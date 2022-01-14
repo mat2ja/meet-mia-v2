@@ -30,12 +30,16 @@ const props = defineProps({
     margin-right: 5px;
     margin-bottom: -2px;
 
-    &.lg {
-      font-size: var(--text-4xl);
-    }
-
     @media only screen and (max-width: 600px) {
       font-size: var(--text-lg);
+    }
+
+    &.lg {
+      font-size: var(--text-4xl);
+
+      @media only screen and (max-width: 800px) {
+        font-size: var(--text-3xl);
+      }
     }
   }
 
@@ -44,12 +48,16 @@ const props = defineProps({
     font-weight: 600;
     font-size: var(--text-4xl);
 
-    &.lg {
-      font-size: var(--text-5xl);
-    }
-
     @media only screen and (max-width: 600px) {
       font-size: var(--text-2xl);
+    }
+
+    &.lg {
+      font-size: var(--text-5xl);
+
+      @media only screen and (max-width: 800px) {
+        font-size: var(--text-4xl);
+      }
     }
   }
 }
