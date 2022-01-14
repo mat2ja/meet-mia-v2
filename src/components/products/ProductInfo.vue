@@ -110,7 +110,7 @@ const { width } = useWindowSize();
     font-size: var(--text-xl);
 
     @media only screen and (max-width: 800px) {
-      font-size: var(--text-lg);
+      font-size: var(--text-md);
     }
   }
 

@@ -139,7 +139,7 @@ button {
 }
 
 .btn {
-  padding: 1em 2.2em;
+  padding: .9rem 2.2rem;
   text-transform: uppercase;
   border: none;
   border-radius: var(--border-radius);
@@ -165,7 +165,7 @@ button {
   }
 
   @media only screen and (max-width: 600px) {
-    padding: 0.6em 1.5em;
+    padding: 0.9rem 1.5rem;
     font-size: var(--text-sm);
   }
 }
