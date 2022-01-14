@@ -58,6 +58,7 @@ watchEffect(() => {
         </div>
       </div>
     </div>
+
     <div class="row-wrapper row-wrapper--products">
       <div class="row">
         <h3>Slični proizvodi</h3>
@@ -95,24 +96,33 @@ name: productPage
   height: 900px;
   max-width: 100vw;
   z-index: -1;
-  filter: opacity(0.15) saturate(0.5);
+  // TODO ??
+  filter: opacity(0.15) saturate(0.3);
 }
 .row-wrapper {
   &--overview {
-    padding-bottom: 8rem;
+    background-image: url('/src/assets/wave-haikei.svg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateY(4px);
 
     @media only screen and(max-width: 1000px) {
-      padding-bottom: 6rem;
+      // padding-bottom: 6rem;
     }
   }
 
   &--products {
-    padding: 5rem 0 5rem;
+    padding: 1rem 0 6rem;
     background: var(--peach-300);
 
     h3 {
       font-size: var(--text-4xl);
       margin-bottom: 1.5rem;
+    }
+
+    @media only screen and(max-width: 1000px) {
+      padding-top: 10rem;
     }
   }
 }
@@ -120,14 +130,15 @@ name: productPage
   display: grid;
   align-items: center;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-columns: repeat(12, 1fr);
   gap: 2rem;
+  padding-bottom: 26vh;
 
   @media only screen and(max-width: 1000px) {
     display: flex;
     gap: 2rem;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 0;
   }
 
   &__image {
@@ -167,6 +178,8 @@ name: productPage
   &__info {
     flex: 1;
     grid-column: 7 / -1;
+    width: 100%;
+    max-width: 700px;
   }
 }
 </style>

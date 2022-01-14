@@ -153,12 +153,6 @@ defineProps({
 
       .btn {
         flex: 1;
-        padding-top: 1em;
-        padding-bottom: 1em;
-
-        @media only screen and (max-width: 600px) {
-          padding: 0.8em;
-        }
       }
     }
   }
