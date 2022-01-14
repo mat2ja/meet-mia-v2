@@ -19,9 +19,10 @@ const { left } = useElementBounding(heroRow);
       :items="getRandomProducts(section.itemCount)"
       :icon="section.icon"
       :offset="left"
+      class="homepage__products"
     />
 
-    <CategoriesSection />
+    <CategoriesSection class="homepage__categories" />
   </div>
 </template>
 
@@ -42,6 +43,31 @@ const { left } = useElementBounding(heroRow);
 }
 .homepage {
   padding: 3rem 0 6rem;
+
+  background-image: url('/src/assets/wave-haikei-brown.svg');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media only screen and(max-width: 800px) {
+    padding-bottom: 4rem;
+  }
+
+  &__products {
+    margin-bottom: 3rem;
+
+    @media only screen and(max-width: 800px) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__categories {
+    margin-top: 5rem;
+
+    @media only screen and(max-width: 800px) {
+      margin-top: 0.5rem;
+    }
+  }
 }
 
 section {

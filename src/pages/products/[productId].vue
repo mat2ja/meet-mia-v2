@@ -64,6 +64,7 @@ watchEffect(() => {
         <h3>Slični proizvodi</h3>
       </div>
       <ProductGrid
+        class="row-wrapper__product-grid"
         :items="productsStore.getRandomProducts(8)"
         :style="{
           paddingLeft: `${left}px`,
@@ -116,6 +117,11 @@ name: productPage
     padding: 1rem 0 6rem;
     background: var(--peach-300);
 
+    background-image: url('/src/assets/wave-haikei-brown.svg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
     h3 {
       font-size: var(--text-4xl);
       margin-bottom: 1.5rem;
@@ -123,6 +129,18 @@ name: productPage
 
     @media only screen and(max-width: 1000px) {
       padding-top: 10rem;
+    }
+  }
+
+  &__product-grid {
+    padding-bottom: 8rem;
+
+    @media only screen and(max-width: 800px) {
+      padding-bottom: 5rem;
+    }
+
+    @media only screen and(max-width: 500px) {
+      padding-bottom: 3rem;
     }
   }
 }

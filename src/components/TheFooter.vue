@@ -9,9 +9,7 @@ const { footerItems } = useStore();
       <div class="row">
         <section class="footer__grid">
           <div class="footer__column">
-            <h4 class="footer__column-title">
-              Navigacija
-            </h4>
+            <h4 class="footer__column-title">Navigacija</h4>
             <ul class="footer__list">
               <li
                 v-for="item in footerItems.navigacija"
@@ -23,9 +21,7 @@ const { footerItems } = useStore();
             </ul>
           </div>
           <div class="footer__column desktop">
-            <h4 class="footer__column-title">
-              Lokacija
-            </h4>
+            <h4 class="footer__column-title">Lokacija</h4>
             <ul class="footer__list">
               <li
                 v-for="item in footerItems.lokacija"
@@ -40,9 +36,7 @@ const { footerItems } = useStore();
             <img src="/images/logo-2.png" alt="logo" />
           </div>
           <div class="footer__column right">
-            <h4 class="footer__column-title">
-              Kontakt
-            </h4>
+            <h4 class="footer__column-title">Kontakt</h4>
             <ul class="footer__list">
               <li
                 v-for="item in footerItems.kontakt"
@@ -54,9 +48,7 @@ const { footerItems } = useStore();
             </ul>
           </div>
           <div class="footer__column right">
-            <h4 class="footer__column-title">
-              Info
-            </h4>
+            <h4 class="footer__column-title">Info</h4>
             <ul class="footer__list">
               <li
                 v-for="item in footerItems.info"
@@ -115,7 +107,11 @@ const { footerItems } = useStore();
   z-index: 20;
 
   &__top {
-    padding: 5rem 0;
+    padding: 4rem 0 5rem;
+
+    @media only screen and (max-width: 800px) {
+      padding: 5rem 0;
+    }
   }
 
   &__grid {

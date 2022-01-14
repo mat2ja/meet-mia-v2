@@ -40,12 +40,11 @@ const imageImport = (filename) => `url(./images/${filename}.jpg)`;
 
 <style lang="scss" scoped>
 .section-categories {
-  margin-top: 4rem;
 }
 
 .categories {
   &__grid {
-    padding: 4rem 0;
+    padding: 2rem 0 4rem;
     display: grid;
     align-items: center;
     grid-template-columns: 1fr auto;
