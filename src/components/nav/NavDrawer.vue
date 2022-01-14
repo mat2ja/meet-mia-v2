@@ -10,7 +10,7 @@ const {
 </script>
 
 <template>
-  <div class="nav-drawer tablet" v-if="isNavDrawerOpen">
+  <div v-if="isNavDrawerOpen" class="nav-drawer tablet">
     <header class="nav-drawer__header row">
       <div class="icon__wrapper left" @click="closeNavDrawer">
         <box-icon class="icon" size="md" name="x" />
@@ -33,16 +33,14 @@ const {
               name="chevron-down-square"
             />
           </span>
-          <ul class="nav-drawer-dropdown__list" v-if="isCategoryDropdownOpen">
+          <ul v-if="isCategoryDropdownOpen" class="nav-drawer-dropdown__list">
             <li class="nav-drawer-dropdown__item">
               <a href="#" class="nav-drawer-dropdown__link">
-                <span class="emoji">🍰️</span> Kolači</a
-              >
+                <span class="emoji">🍰️</span> Kolači</a>
             </li>
             <li class="nav-drawer-dropdown__item">
               <a href="#" class="nav-drawer-dropdown__link">
-                <span class="emoji">🎂️</span> Torte</a
-              >
+                <span class="emoji">🎂️</span> Torte</a>
             </li>
             <li class="nav-drawer-dropdown__item">
               <a href="#" class="nav-drawer-dropdown__link">
@@ -50,14 +48,10 @@ const {
               </a>
             </li>
             <li class="nav-drawer-dropdown__item">
-              <a href="#" class="nav-drawer-dropdown__link"
-                ><span class="emoji">🥪️</span> Sendviči</a
-              >
+              <a href="#" class="nav-drawer-dropdown__link"><span class="emoji">🥪️</span> Sendviči</a>
             </li>
             <li class="nav-drawer-dropdown__item">
-              <a href="#" class="nav-drawer-dropdown__link"
-                ><span class="emoji">🍹️</span> Ostalo</a
-              >
+              <a href="#" class="nav-drawer-dropdown__link"><span class="emoji">🍹️</span> Ostalo</a>
             </li>
           </ul>
         </li>

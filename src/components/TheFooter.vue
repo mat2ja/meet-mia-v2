@@ -9,24 +9,28 @@ const { footerItems } = useStore();
       <div class="row">
         <section class="footer__grid">
           <div class="footer__column">
-            <h4 class="footer__column-title">Navigacija</h4>
+            <h4 class="footer__column-title">
+              Navigacija
+            </h4>
             <ul class="footer__list">
               <li
-                class="footer__list-item"
                 v-for="item in footerItems.navigacija"
                 :key="item.label"
+                class="footer__list-item"
               >
                 <a href="#" class="footer_link">{{ item.label }}</a>
               </li>
             </ul>
           </div>
           <div class="footer__column desktop">
-            <h4 class="footer__column-title">Lokacija</h4>
+            <h4 class="footer__column-title">
+              Lokacija
+            </h4>
             <ul class="footer__list">
               <li
-                class="footer__list-item"
                 v-for="item in footerItems.lokacija"
                 :key="item.label"
+                class="footer__list-item"
               >
                 <a href="#" class="footer_link">{{ item.label }}</a>
               </li>
@@ -36,24 +40,28 @@ const { footerItems } = useStore();
             <img src="/images/logo-2.png" alt="logo" />
           </div>
           <div class="footer__column right">
-            <h4 class="footer__column-title">Kontakt</h4>
+            <h4 class="footer__column-title">
+              Kontakt
+            </h4>
             <ul class="footer__list">
               <li
-                class="footer__list-item"
                 v-for="item in footerItems.kontakt"
                 :key="item.label"
+                class="footer__list-item"
               >
                 <a href="#" class="footer_link">{{ item.label }}</a>
               </li>
             </ul>
           </div>
           <div class="footer__column right">
-            <h4 class="footer__column-title">Info</h4>
+            <h4 class="footer__column-title">
+              Info
+            </h4>
             <ul class="footer__list">
               <li
-                class="footer__list-item"
                 v-for="item in footerItems.info"
                 :key="item.label"
+                class="footer__list-item"
               >
                 <a href="#" class="footer_link">{{ item.label }}</a>
               </li>

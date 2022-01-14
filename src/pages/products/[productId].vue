@@ -2,7 +2,8 @@
 import { useProducts } from '@/stores/products.js';
 import { random } from 'lodash';
 
-const { getProductById, getRandomProducts } = useProducts();
+// const { getProductById, getRandomProducts } = useProducts();
+const productsStore = useProducts();
 
 const route = useRoute();
 
@@ -15,11 +16,11 @@ const BG_COUNT = 5;
 const randN = ref();
 const bgPattern = computed(() => `var(--bg-img-pattern-${randN.value})`);
 
-const genDifferentNumber = () => {
+const genDifferentNumber = (value, { from = 1, to }) => {
   let n = 0;
   do {
-    n = random(1, BG_COUNT);
-  } while (n === randN.value);
+    n = random(from, to);
+  } while (n === value);
   return n;
 };
 
@@ -27,8 +28,8 @@ watchEffect(() => {
   const {
     params: { productId },
   } = route;
-  product.value = getProductById(productId);
-  randN.value = genDifferentNumber();
+  product.value = productsStore.getProductById(productId);
+  randN.value = genDifferentNumber(randN.value, { to: BG_COUNT });
 });
 </script>
 
@@ -40,7 +41,7 @@ watchEffect(() => {
       alt="Product image"
     />
     <div class="row-wrapper row-wrapper--overview">
-      <div class="row" ref="productRow">
+      <div ref="productRow" class="row">
         <div class="product-overview">
           <div class="product-overview__image">
             <img
@@ -52,7 +53,7 @@ watchEffect(() => {
             :key="route.params.productId"
             :item="product"
             class="product-overview__info"
-            :bgPattern="bgPattern"
+            :bg-pattern="bgPattern"
           />
         </div>
       </div>
@@ -62,7 +63,7 @@ watchEffect(() => {
         <h3>Slični proizvodi</h3>
       </div>
       <ProductGrid
-        :items="getRandomProducts(8)"
+        :items="productsStore.getRandomProducts(8)"
         :style="{
           paddingLeft: `${left}px`,
           paddingRight: `${left}px`,

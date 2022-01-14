@@ -3,10 +3,16 @@
 <template>
   <section class="section-hero row">
     <div class="section-hero__content">
-      <h1 class="section-hero__title">Zemi si tortu</h1>
+      <h1 class="section-hero__title">
+        Zemi si tortu
+      </h1>
       <div class="section-hero__buttons">
-        <button class="btn btn--primary">primary</button>
-        <button class="btn btn--secondary">secondary</button>
+        <button class="btn btn--primary">
+          primary
+        </button>
+        <button class="btn btn--secondary">
+          secondary
+        </button>
       </div>
     </div>
     <div class="section-hero__image">

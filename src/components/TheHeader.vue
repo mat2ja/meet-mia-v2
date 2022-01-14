@@ -61,8 +61,8 @@ const toggleCategoryBar = () => {
 
           <transition name="fade">
             <div
-              class="nav__category-bar category-bar desktop"
               v-show="categoryBarOpen"
+              class="nav__category-bar category-bar desktop"
             >
               <div class="row">
                 <nav class="category-bar__nav">

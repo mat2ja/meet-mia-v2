@@ -9,19 +9,19 @@ const imageImport = (filename) => `url(./images/${filename}.jpg)`;
 <template>
   <section class="section-categories row">
     <div
+      v-for="(categoryGroup, categoryName) of categories"
+      :id="`kat-${categoryName}`"
+      :key="categoryName"
       class="categories__grid"
       :class="{ reverse: categoryName === 'slano' }"
-      v-for="(categoryGroup, categoryName) of categories"
-      :key="categoryName"
-      :id="`kat-${categoryName}`"
     >
       <div class="categories__product-grid">
         <div
           v-for="cat in categoryGroup"
+          :id="`cat-${cat.id}`"
+          :key="cat.id"
           class="categories__card category-card"
           :style="{ backgroundImage: imageImport(cat.id) }"
-          :key="cat.id"
-          :id="`cat-${cat.id}`"
         >
           <h4 class="category-card__label">
             {{ cat.label }}
