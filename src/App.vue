@@ -26,8 +26,8 @@
 
 html {
   box-sizing: border-box;
-  // overscroll-behavior-y: contain;
   scrollbar-color: var(--peach-600) var(--peach-100);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -90,6 +90,10 @@ a {
   display: block;
 }
 
+.no-scrollbar {
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -139,7 +143,7 @@ button {
 }
 
 .btn {
-  padding: .9rem 2.2rem;
+  padding: 0.9rem 2.2rem;
   text-transform: uppercase;
   border: none;
   border-radius: var(--border-radius);

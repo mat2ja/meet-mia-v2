@@ -118,11 +118,11 @@ defineProps({
       }
     }
 
-    // TODO
     &__price {
       display: flex;
       justify-content: flex-end;
       align-items: baseline;
+      margin: 0.75rem 0;
 
       &--currency {
         font-family: var(--font-primary);

@@ -122,6 +122,8 @@ name: productPage
     background-repeat: no-repeat;
     background-size: cover;
 
+    transform: translateY(4px);
+
     h3 {
       font-size: var(--text-4xl);
       margin-bottom: 1.5rem;

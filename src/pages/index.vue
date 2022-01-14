@@ -13,8 +13,9 @@ const { left } = useElementBounding(heroRow);
     <HeroSection ref="heroRow" />
 
     <ProductsSection
-      v-for="(section, i) in productsSections"
-      :key="`${section.title}-${i}`"
+      v-for="section in productsSections"
+      :id="section.id"
+      :key="section.id"
       :title="section.title"
       :items="getRandomProducts(section.itemCount)"
       :icon="section.icon"
@@ -37,7 +38,7 @@ const { left } = useElementBounding(heroRow);
   z-index: -1;
 
   background-repeat: no-repeat;
-  background-position: 56px -60px, -50px -40%;
+  background-position: 5vw -5vh, 0 -38vw;
   background-size: 40%, 200%;
   background-image: url('@/assets/blob-3.svg'), url('@/assets/Rectangle446.svg');
 }
@@ -48,6 +49,8 @@ const { left } = useElementBounding(heroRow);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
+
+  transform: translateY(4px);
 
   @media only screen and(max-width: 800px) {
     padding-bottom: 4rem;
@@ -68,10 +71,5 @@ const { left } = useElementBounding(heroRow);
       margin-top: 0.5rem;
     }
   }
-}
-
-section {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 </style>

@@ -40,6 +40,14 @@ const imageImport = (filename) => `url(./images/${filename}.jpg)`;
 
 <style lang="scss" scoped>
 .section-categories {
+  padding-bottom: 5rem;
+
+  @media only screen and (max-width: 800px) {
+    padding-bottom: 2rem;
+  }
+  @media only screen and (max-width: 600px) {
+    padding-bottom: 0;
+  }
 }
 
 .categories {

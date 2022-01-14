@@ -3,20 +3,18 @@
 <template>
   <section class="section-hero row">
     <div class="section-hero__content">
-      <h1 class="section-hero__title">
-        Zemi si tortu
-      </h1>
+      <h1 class="section-hero__title">Zgrabi si torticu</h1>
       <div class="section-hero__buttons">
-        <button class="btn btn--primary">
-          primary
-        </button>
-        <button class="btn btn--secondary">
-          secondary
-        </button>
+        <a href="#ponuda-popularno">
+          <button class="btn btn--primary">Istraži ponudu</button>
+        </a>
+        <a href="#ponuda-posebno">
+          <button class="btn btn--secondary">daj što daš</button>
+        </a>
       </div>
     </div>
     <div class="section-hero__image">
-      <img src="/images/hero.png" alt="cake" draggable="false" />
+      <img src="/images/cupcake.png" alt="cake" draggable="false" />
     </div>
   </section>
 </template>
@@ -71,23 +69,23 @@
 
   &__image {
     grid-column: span 5;
-    transform: translateX(6rem) translateY(-4rem);
+    transform: translateX(5rem) translateY(-2rem);
     position: relative;
-    // z-index: -1;
 
     @media only screen and(max-width: 1000px) {
       grid-column: span 1;
       width: 750px;
-      transform: translateX(0) translateY(0);
+      transform: translateX(0);
     }
 
     @media only screen and(max-width: 600px) {
       display: none;
-      transform: translateX(40%) translateY(0);
+      transform: translateX(40%);
     }
 
     img {
       width: 100%;
+      max-width: 450px;
     }
   }
 

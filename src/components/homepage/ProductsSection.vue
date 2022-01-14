@@ -31,10 +31,16 @@ defineProps({
 
 <style lang="scss" scoped>
 .products-section {
+  padding-top: 6rem;
+  padding-bottom: 0;
+
+  &__grid {
+    margin-top: 2rem;
+  }
 }
 
-.no-scrollbar {
-  overflow: hidden;
+#ponuda-popularno {
+  padding-top: 6rem;
 }
 
 .title-box {
@@ -59,12 +65,6 @@ defineProps({
       width: 120px;
       left: -2rem;
     }
-  }
-}
-
-.products-section {
-  &__grid {
-    margin-top: 2rem;
   }
 }
 </style>
