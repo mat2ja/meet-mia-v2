@@ -2,7 +2,7 @@
 import useNavDrawer from '@/composables/useNavDrawer.js';
 import useCategoryBar from '@/composables/useCategoryBar';
 
-const { categoryBarOpen } = useCategoryBar();
+const { categoryBarOpen, closeCategoryBar } = useCategoryBar();
 
 const { openNavDrawer } = useNavDrawer();
 
@@ -22,7 +22,7 @@ const { y } = useWindowScroll();
         >
           <box-icon class="icon" size="md" name="menu-alt-left" />
         </div>
-        <RouterLink to="/" class="router-link">
+        <RouterLink to="/" class="router-link" @click="closeCategoryBar">
           <HeaderLogo />
         </RouterLink>
         <NavBar />

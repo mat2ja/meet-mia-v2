@@ -65,7 +65,7 @@ const bgPattern = computed(() => `var(--bg-img-pattern-1`);
 
 <style lang="scss" scoped>
 .category-page {
-  padding: 0 0 8rem;
+  padding: 1rem 0 8rem;
   flex: 1;
 
   background-image: url('/src/assets/wave-haikei-brown.svg');
@@ -73,15 +73,11 @@ const bgPattern = computed(() => `var(--bg-img-pattern-1`);
   background-repeat: no-repeat;
   background-size: cover;
   transform: translateY(4px);
-
-  .row {
-    overflow: visible;
-  }
 }
 
 .category {
   &__head {
-    padding: 4rem 0;
+    padding: 2rem 0 4rem;
 
     // background-image: v-bind(bgPattern);
 
