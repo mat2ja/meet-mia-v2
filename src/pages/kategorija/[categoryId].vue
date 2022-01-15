@@ -33,7 +33,7 @@ watchEffect(() => {
   }
 });
 
-const bgPattern = computed(() => `var(--bg-img-pattern-1`);
+// const bgPattern = computed(() => `var(--bg-img-pattern-1`);
 </script>
 
 <template>
@@ -62,6 +62,12 @@ const bgPattern = computed(() => `var(--bg-img-pattern-1`);
     </div>
   </div>
 </template>
+
+<style lang="scss">
+body {
+  background: var(--peach-50);
+}
+</style>
 
 <style lang="scss" scoped>
 .category-page {
