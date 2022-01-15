@@ -104,13 +104,18 @@ const bgPattern = computed(() => `var(--bg-img-pattern-1`);
       padding: 0.75rem 1rem;
       width: 500px;
       display: block;
-      border: 2px dashed var(--burg-500-opaque);
-      border-radius: var(--border-radius-lg);
+
       color: var(--burg-700);
       background: var(--peach-100);
-      font: inherit;
+
+      border: 2px dashed var(--burg-500-opaque);
+      border-radius: var(--border-radius-lg);
+
+      font-family: inherit;
       font-size: var(--text-lg);
       font-weight: 500;
+
+      transition: all 2000ms ease-out;
 
       @media only screen and (max-width: 800px) {
         // TODO
@@ -119,7 +124,7 @@ const bgPattern = computed(() => `var(--bg-img-pattern-1`);
 
       &:focus {
         outline: none;
-        border-style: solid;
+        border: 2px solid var(--burg-500-opaque);
       }
 
       &::placeholder {
