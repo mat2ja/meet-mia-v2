@@ -50,6 +50,9 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .g-cursor {
+  @media (pointer: coarse) {
+    display: none;
+  }
   &_hide {
     opacity: 0;
     width: 60px;
