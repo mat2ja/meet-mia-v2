@@ -36,11 +36,13 @@ const {
           <ul v-if="isCategoryDropdownOpen" class="nav-drawer-dropdown__list">
             <li class="nav-drawer-dropdown__item">
               <a href="#" class="nav-drawer-dropdown__link">
-                <span class="emoji">🍰️</span> Kolači</a>
+                <span class="emoji">🍰️</span> Kolači</a
+              >
             </li>
             <li class="nav-drawer-dropdown__item">
               <a href="#" class="nav-drawer-dropdown__link">
-                <span class="emoji">🎂️</span> Torte</a>
+                <span class="emoji">🎂️</span> Torte</a
+              >
             </li>
             <li class="nav-drawer-dropdown__item">
               <a href="#" class="nav-drawer-dropdown__link">
@@ -48,10 +50,14 @@ const {
               </a>
             </li>
             <li class="nav-drawer-dropdown__item">
-              <a href="#" class="nav-drawer-dropdown__link"><span class="emoji">🥪️</span> Sendviči</a>
+              <a href="#" class="nav-drawer-dropdown__link"
+                ><span class="emoji">🥪️</span> Sendviči</a
+              >
             </li>
             <li class="nav-drawer-dropdown__item">
-              <a href="#" class="nav-drawer-dropdown__link"><span class="emoji">🍹️</span> Ostalo</a>
+              <a href="#" class="nav-drawer-dropdown__link"
+                ><span class="emoji">🍹️</span> Ostalo</a
+              >
             </li>
           </ul>
         </li>
@@ -120,7 +126,7 @@ const {
     justify-content: space-between;
     padding: 0.75rem 0;
     border-radius: var(--border-radius);
-    cursor: pointer;
+    //  cursor: pointer;
 
     .inner-icon {
     }

@@ -128,7 +128,7 @@ const toggleCategoryBar = () => {
 
   .icon {
     &__wrapper {
-      cursor: pointer;
+      //  cursor: pointer;
       padding: 1rem;
       display: flex;
 
@@ -164,7 +164,7 @@ const toggleCategoryBar = () => {
     align-items: center;
     padding: 0.6rem 1.4rem;
     border-radius: var(--border-radius);
-    cursor: pointer;
+    //  cursor: pointer;
     transition: all 250ms ease-out;
 
     .inner-icon {
