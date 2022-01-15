@@ -38,7 +38,7 @@ const { left } = useElementBounding(heroRow);
   z-index: -1;
 
   background-repeat: no-repeat;
-  background-position: 5vw -5vh, 0 -38vw;
+  background-position: 5vw -5vh, 0 -30vw;
   background-size: 40%, 200%;
   background-image: url('@/assets/blob-3.svg'), url('@/assets/Rectangle446.svg');
 }
@@ -64,10 +64,10 @@ const { left } = useElementBounding(heroRow);
   }
 
   &__categories {
-    margin-top: 5rem;
+    margin-top: 10rem;
 
     @media only screen and(max-width: 800px) {
-      margin-top: 0.5rem;
+      margin-top: 6rem;
     }
   }
 }

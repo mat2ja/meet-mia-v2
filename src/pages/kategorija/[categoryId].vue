@@ -66,30 +66,43 @@ const bgPattern = computed(() => `var(--bg-img-pattern-1`);
 <style lang="scss" scoped>
 .category-page {
   padding: 0 0 8rem;
+  flex: 1;
 
   background-image: url('/src/assets/wave-haikei-brown.svg');
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   transform: translateY(4px);
+
+  .row {
+    overflow: visible;
+  }
 }
 
 .category {
   &__head {
-    padding: 4rem 0 4rem;
+    padding: 4rem 0;
 
     // background-image: v-bind(bgPattern);
 
-    // background-image: url('/src/assets/blob-pattern.svg');
-    // background-repeat: no-repeat;
-    // background-size: 300px;
-    // background-position: left top;
+    background-image: url('/src/assets/blob-pattern.svg');
+    background-repeat: no-repeat;
+    background-size: 300px;
+    background-position: -20px -50px;
 
     display: flex;
     // flex-direction: column;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+
+    @media only screen and (max-width: 800px) {
+      padding: 2rem 0 3rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+      padding: 1rem 0 2rem;
+    }
 
     input {
       padding: 0.75rem 1rem;
@@ -122,6 +135,14 @@ const bgPattern = computed(() => `var(--bg-img-pattern-1`);
   &__title {
     font-size: var(--text-8xl);
     text-align: center;
+
+    @media only screen and (max-width: 800px) {
+      font-size: var(--text-6xl);
+    }
+
+    @media only screen and (max-width: 600px) {
+      font-size: var(--text-5xl);
+    }
   }
 
   &__not-found {

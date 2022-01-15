@@ -86,10 +86,10 @@ export const useProducts = defineStore('products', {
             'Tortilja od slanutka, tapioke i špinata punjena humusom, dimljenim tofuom, salatom, rajčicom i tikvicama',
           price: '35.00',
           imageUrl: 'vege-wrap.avif',
-          tags: [2, 6, 8, 11],
+          tags: [2, 7, 8, 11],
         },
         {
-          id: 'ads3',
+          id: 'xVo-ez',
           name: 'Porky',
           description:
             'Sendvič s mariniranom svinjetinom, sirom, kiselim krastavcima i umakom od senfa, meda i naranče u domaćem pecivu',
@@ -98,12 +98,54 @@ export const useProducts = defineStore('products', {
           tags: [2, 7],
         },
         {
+          id: 'XR4Aif',
+          name: 'Brioche špinat',
+          description: 'Brioche sa špinatom i sirom',
+          price: '15.00',
+          imageUrl: 'brioche-spinat.avif',
+          tags: [2, 7],
+        },
+        {
+          id: '76J1qL',
+          name: 'Croissant marmelada',
+          description:
+            'Ručno rađeni croissant punjen domaćom marmeladom od marelica',
+          price: '12.00',
+          imageUrl: 'croissant-marmelada.avif',
+          tags: [1, 6],
+        },
+        {
+          id: 'XTX2hx',
+          name: 'Regular croissant',
+          description: 'Domaći ručno rađeni croissant s maslacem',
+          price: '8.00',
+          imageUrl: 'regular-croissant.avif',
+          tags: [1, 6],
+        },
+        {
+          id: 'NrhFku',
+          name: 'Croissant pršut',
+          description: 'Croissant s pršutom i sirom',
+          price: '18.00',
+          imageUrl: 'croissant-prsut.avif',
+          tags: [2, 6],
+        },
+        {
           id: 'k5cCsV',
           name: 'Brioche humus',
           description:
             'Fino brioche pecivo s humusom, mariniranim tikvicama i sirom',
           price: '15.00',
           imageUrl: 'brioche-hummus.avif',
+          tags: [2, 7, 10],
+        },
+        {
+          id: 'EAnGIk',
+          name: 'Bagel Pesto',
+          description:
+            'Domaće bagel pecivo s pestom, mozzarellom i cherry rajčicom',
+          price: '15.00',
+          imageUrl: 'bagel-pesto.avif',
           tags: [2, 7, 10],
         },
         {

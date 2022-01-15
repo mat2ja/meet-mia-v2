@@ -1,5 +1,8 @@
 <script setup>
 import useNavDrawer from '@/composables/useNavDrawer.js';
+import useCategoryBar from '@/composables/useCategoryBar';
+
+const { categoryBarOpen } = useCategoryBar();
 
 const { openNavDrawer } = useNavDrawer();
 
@@ -75,6 +78,4 @@ const { y } = useWindowScroll();
     }
   }
 }
-
-
 </style>

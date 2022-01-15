@@ -203,6 +203,9 @@ button {
   // padding-top: 2rem;
   // padding-bottom: 6rem;
   // margin-bottom: 4rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 
   @media only screen and(min-width: 800px) {
     // padding-top: 4rem;

@@ -1,9 +1,7 @@
 <script setup>
-const props = defineProps({
+defineProps({
   category: Object,
 });
-
-console.log('props.category :>> ', props.category);
 
 const imageImport = (filename) => `url(./images/${filename}.jpg)`;
 </script>

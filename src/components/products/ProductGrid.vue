@@ -14,7 +14,6 @@ defineProps({
 .product-grid {
   padding: 0.5rem 0 2rem;
   display: flex;
-  align-items: center;
   gap: 1rem;
   overflow-y: visible;
   overflow-x: auto;

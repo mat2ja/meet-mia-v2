@@ -1,8 +1,8 @@
 <script setup>
-const categoryBarOpen = ref(false);
-const toggleCategoryBar = () => {
-  categoryBarOpen.value = !categoryBarOpen.value;
-};
+import useCategoryBar from '@/composables/useCategoryBar';
+
+const { categoryBarOpen, toggleCategoryBar, closeCategoryBar } =
+  useCategoryBar();
 </script>
 
 <template>
@@ -42,7 +42,7 @@ const toggleCategoryBar = () => {
       <NavCategoryBar
         v-show="categoryBarOpen"
         class="nav__category-bar"
-        @close="categoryBarOpen = false"
+        @close="closeCategoryBar"
       />
     </transition>
   </nav>

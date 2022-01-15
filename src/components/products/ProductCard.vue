@@ -24,9 +24,11 @@ defineProps({
           </p>
         </div>
       </div>
-      <ProductPrice class="product__price" :price="item.price" />
-      <div class="product__buttons">
-        <button class="btn btn--primary">Dodaj u košaricu</button>
+      <div class="product-card__bottom">
+        <ProductPrice class="product__price" :price="item.price" />
+        <div class="product__buttons">
+          <button class="btn btn--primary">Dodaj u košaricu</button>
+        </div>
       </div>
     </div>
   </div>
@@ -46,6 +48,9 @@ defineProps({
   transform: rotate(0deg) scale(1);
   transition: all 200ms cubic-bezier(0.26, 0.22, 0.27, 1.45);
 
+  display: flex;
+  flex-direction: column;
+
   &:hover {
     outline: 2px dashed var(--peach-600);
     outline-offset: 5px;
@@ -61,6 +66,10 @@ defineProps({
 
   &__content {
     padding: 1.3rem 1rem 1rem;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
   }
 
   &__link {
@@ -69,6 +78,10 @@ defineProps({
         filter: saturate(1.2) contrast(1.05) brightness(0.99);
       }
     }
+  }
+
+  &__bottom {
+    margin-top: auto;
   }
 
   .product {
@@ -98,6 +111,10 @@ defineProps({
       margin-bottom: 0.5em;
       margin-top: 0.4em;
       font-weight: 800;
+
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
 
       @media only screen and (max-width: 600px) {
         font-size: var(--text-lg);

@@ -15,7 +15,9 @@ const {
       <div class="icon__wrapper left" @click="closeNavDrawer">
         <box-icon class="icon" size="md" name="x" />
       </div>
-      <HeaderLogo />
+      <RouterLink to="/" @click="closeNavDrawer">
+        <HeaderLogo />
+      </RouterLink>
       <div class="header__hamburger tablet icon__wrapper right">
         <a href="/kosarica" class="nav-link-mobile icon__link">
           <box-icon class="icon" size="md" name="cart-alt" />
@@ -36,40 +38,45 @@ const {
           <ul v-if="isCategoryDropdownOpen" class="nav-drawer-dropdown__list">
             <li class="nav-drawer-dropdown__item">
               <RouterLink
-                :to="`categories/kolaci`"
+                :to="`/kategorija/kolaci`"
                 class="nav-drawer-dropdown__link"
+                @click="closeNavDrawer"
               >
                 <span class="emoji">🍰️</span> Kolači
               </RouterLink>
             </li>
             <li class="nav-drawer-dropdown__item">
               <RouterLink
-                :to="`categories/torte`"
+                :to="`/kategorija/torte`"
                 class="nav-drawer-dropdown__link"
+                @click="closeNavDrawer"
               >
                 <span class="emoji">🎂️</span> Torte
               </RouterLink>
             </li>
             <li class="nav-drawer-dropdown__item">
               <RouterLink
-                :to="`categories/kroasani`"
+                :to="`/kategorija/kroasani`"
                 class="nav-drawer-dropdown__link"
+                @click="closeNavDrawer"
               >
                 <span class="emoji">🥐</span> Krosasani
               </RouterLink>
             </li>
             <li class="nav-drawer-dropdown__item">
               <RouterLink
-                :to="`categories/sendvici`"
+                :to="`/kategorija/sendvici`"
                 class="nav-drawer-dropdown__link"
+                @click="closeNavDrawer"
               >
                 <span class="emoji">🥪️</span> Sendviči
               </RouterLink>
             </li>
             <li class="nav-drawer-dropdown__item">
               <RouterLink
-                :to="`categories/cijela-ponuda`"
+                :to="`/kategorija/cijela-ponuda`"
                 class="nav-drawer-dropdown__link"
+                @click="closeNavDrawer"
               >
                 <span class="emoji">🍹️</span> Sve
               </RouterLink>
@@ -77,24 +84,43 @@ const {
           </ul>
         </li>
         <li class="nav-drawer__item">
-          <a href="o-nama.html" class="nav-drawer__link">O nama</a>
+          <RouterLink
+            to="/o-nama"
+            class="nav-drawer__link"
+            @click="closeNavDrawer"
+          >
+            O nama
+          </RouterLink>
         </li>
         <li class="nav-drawer__item">
-          <a href="blog.html" class="nav-drawer__link">Blog</a>
+          <RouterLink
+            to="/blog"
+            class="nav-drawer__link"
+            @click="closeNavDrawer"
+          >
+            Blog
+          </RouterLink>
         </li>
         <li class="nav-drawer__item">
-          <a href="kontakt.html" class="nav-drawer__link">Kontakt</a>
+          <RouterLink
+            to="/kontakt"
+            class="nav-drawer__link"
+            @click="closeNavDrawer"
+          >
+            Kontakt
+          </RouterLink>
         </li>
       </ul>
       <div class="nav-drawer__user">
-        <a
-          href="/profil"
+        <RouterLink
+          to="/profil"
           class="nav-link nav-link-mobile"
           aria-label="Location"
+          @click="closeNavDrawer"
         >
           <box-icon class="icon" size="lg" name="user-circle" />
           Matija Osrečki
-        </a>
+        </RouterLink>
       </div>
     </nav>
   </div>
