@@ -5,13 +5,13 @@ export const useStore = defineStore('main', {
     return {
       footerItems: {
         navigacija: [
-          { label: 'Naslovnica' },
-          { label: 'Ponuda' },
-          { label: 'O nama' },
-          { label: 'Blog' },
-          { label: 'Kontakt' },
-          { label: 'Košarica' },
-          { label: 'Korisnički profil' },
+          { label: 'Naslovnica', url: '/' },
+          { label: 'Ponuda', url: '/kategorija/cijela-ponuda' },
+          { label: 'O nama', url: '/o-nama' },
+          { label: 'Blog', url: '/blog' },
+          { label: 'Kontakt', url: '/kontakt' },
+          { label: 'Košarica', url: '/kosarica' },
+          { label: 'Korisnički profil', url: '/profil' },
         ],
         lokacija: [
           { label: 'Vlaška ul. 43, 10000 Zagreb' },

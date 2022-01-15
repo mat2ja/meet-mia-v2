@@ -6,7 +6,6 @@ const productsStore = useProducts();
 const categoriesStore = useCategories();
 
 const route = useRoute();
-console.log(route);
 
 const category = ref();
 const products = ref([]);

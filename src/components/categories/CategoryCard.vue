@@ -31,10 +31,15 @@ const imageImport = (filename) => `url(./images/${filename}.jpg)`;
   background-position: center;
   background-size: cover;
 
+  transition: all 500ms ease-out;
+
   display: flex;
   align-items: end;
   justify-content: end;
   padding: 0.75rem;
+
+  &:hover {
+  }
 
   @media only screen and (max-width: 800px) {
     aspect-ratio: revert;

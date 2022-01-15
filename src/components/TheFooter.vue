@@ -16,7 +16,9 @@ const { footerItems } = useStore();
                 :key="item.label"
                 class="footer__list-item"
               >
-                <a href="#" class="footer_link">{{ item.label }}</a>
+                <RouterLink :to="item.url" class="footer_link">
+                  {{ item.label }}
+                </RouterLink>
               </li>
             </ul>
           </div>

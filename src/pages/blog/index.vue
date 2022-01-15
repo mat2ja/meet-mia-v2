@@ -1,13 +1,17 @@
 <script setup>
-const blogPosts = [
-  {
-    title: '',
-    text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus, maxime! Quidem libero ullam, suscipit nihil iusto dicta, vitae ex illo autem, deleniti odit dolore? Deserunt reiciendis recusandae eos adipisci facilis! Lorem ipsum dolor sit amet',
-    imageUrl: 'sendvici.jpg',
-    id: 1,
-    ts: new Date(new Date().getTime() - 1000 * 60 * 60 * 24 * 3),
-  },
-];
+import { useBlog } from '@/stores/blog.js';
+
+const blogStore = useBlog();
+
+const blogPosts = blogStore.posts;
+
+const formatDate = (ts) => {
+  return ts.toLocaleDateString('hr', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+};
 </script>
 
 <template>
@@ -16,18 +20,25 @@ const blogPosts = [
       <h1 class="blog__title">Blog</h1>
       <div>
         <div class="blog__posts">
-          <div v-for="i in 4" :key="i" class="blog__post blog-post">
+          <div
+            v-for="post in blogPosts"
+            :key="post.id"
+            class="blog__post blog-post"
+          >
             <div class="blog-post__image">
-              <img src="/images/sendvici.jpg" alt="" />
+              <img :src="`/images/${post.imageUrl}`" alt="" />
             </div>
             <div class="blog-post__content">
-              <h3 class="blog-post__content-title">Novi prašak za pecivo</h3>
+              <div class="blog-post__head">
+                <p class="blog-post__date">{{ formatDate(post.ts) }}</p>
+                <h3 class="blog-post__content-title">{{ post.title }}</h3>
+              </div>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus,
-                maxime! Quidem libero ullam, suscipit nihil iusto dicta, vitae
-                ex illo autem, deleniti odit dolore? Deserunt reiciendis
-                recusandae eos adipisci facilis! Lorem ipsum dolor sit amet
+                {{ post.text }}
               </p>
+              <RouterLink :to="`/blog/post/${post.id}`" class="blog-post__link">
+                <span>Pročitaj više</span>
+              </RouterLink>
             </div>
           </div>
         </div>
@@ -38,7 +49,7 @@ const blogPosts = [
 
 <style lang="scss" scoped>
 .blog-page {
-  padding: 1rem 0 6rem;
+  padding: 2.5rem 0 6rem;
   flex: 1;
 
   background-image: url('/src/assets/wave-haikei-brown.svg');
@@ -78,11 +89,22 @@ const blogPosts = [
   box-shadow: var(--box-shadow-peach);
   border-radius: var(--border-radius-lg);
   // overflow: hidden;
-  max-height: 400px;
+
+  min-height: 250px;
 
   &:nth-child(2n) {
-    .blog-post__image {
-      order: 2;
+    .blog-post {
+      &__image {
+        order: 2;
+      }
+
+      &__head {
+        align-items: flex-end;
+      }
+
+      &__content {
+        text-align: right;
+      }
     }
   }
 
@@ -116,9 +138,12 @@ const blogPosts = [
   }
 
   &__content {
-    padding: 2rem;
-    padding-left: 2.5rem;
+    padding: 2rem 2.5rem;
     flex: 3;
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
 
     &-title {
       font-size: var(--text-3xl);
@@ -126,6 +151,30 @@ const blogPosts = [
     }
 
     p {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__date {
+    color: var(--burg-500);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+
+  &__link {
+    color: var(--burg-500);
+    margin-top: auto;
+    padding: 0.5rem 0;
+    margin-bottom: -0.5rem;
+
+    &:hover {
+      color: var(--burg-700);
     }
   }
 }

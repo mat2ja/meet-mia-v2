@@ -45,19 +45,22 @@ defineProps({
 
   box-shadow: var(--box-shadow-peach);
 
-  transform: rotate(0deg) scale(1);
-  transition: all 200ms cubic-bezier(0.26, 0.22, 0.27, 1.45);
+  outline: 2px dashed transparent;
+  transition: outline 500ms ease-out;
 
   display: flex;
   flex-direction: column;
 
   &:hover {
-    outline: 2px dashed var(--peach-600);
-    outline-offset: 5px;
-    transform: scale(0.98);
-
+    outline-color: var(--peach-600);
     z-index: 10;
     box-shadow: var(--box-shadow-peach-sm);
+
+    .product__image {
+      img {
+        transform: scale(1.07) !important;
+      }
+    }
   }
 
   @media only screen and(max-width: 600px) {
@@ -73,11 +76,6 @@ defineProps({
   }
 
   &__link {
-    &:hover {
-      img {
-        filter: saturate(1.2) contrast(1.05) brightness(0.99);
-      }
-    }
   }
 
   &__bottom {
@@ -86,12 +84,13 @@ defineProps({
 
   .product {
     &__image {
-      img {
-        transition: all 200ms ease-out;
-        display: block;
-      }
+      overflow: hidden;
+      display: block;
 
-      &:hover {
+      img {
+        transition: all 500ms ease-out;
+        display: block;
+        transform: scale(1);
       }
     }
 
