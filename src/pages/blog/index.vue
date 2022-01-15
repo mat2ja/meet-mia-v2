@@ -33,7 +33,7 @@ const formatDate = (ts) => {
                 <p class="blog-post__date">{{ formatDate(post.ts) }}</p>
                 <h3 class="blog-post__content-title">{{ post.title }}</h3>
               </div>
-              <p>
+              <p class="blog-post__text">
                 {{ post.text }}
               </p>
               <RouterLink :to="`/blog/post/${post.id}`" class="blog-post__link">
@@ -149,10 +149,6 @@ const formatDate = (ts) => {
       font-size: var(--text-3xl);
       margin-bottom: 1.5rem;
     }
-
-    p {
-      margin-bottom: 1rem;
-    }
   }
 
   &__head {
@@ -161,9 +157,13 @@ const formatDate = (ts) => {
     align-items: flex-start;
   }
 
+  &__text {
+    margin-bottom: 1rem;
+  }
+
   &__date {
     color: var(--burg-500);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     font-weight: 500;
   }
 
