@@ -16,17 +16,12 @@ const imageImport = (filename) => `url(./images/${filename}.jpg)`;
       :class="{ reverse: categoryName === 'slano' }"
     >
       <div class="categories__product-grid">
-        <div
-          v-for="cat in categoryGroup"
-          :id="`cat-${cat.id}`"
-          :key="cat.id"
-          class="categories__card category-card"
-          :style="{ backgroundImage: imageImport(cat.id) }"
-        >
-          <h4 class="category-card__label">
-            {{ cat.label }}
-          </h4>
-        </div>
+        <CategoryCard
+          v-for="category in categoryGroup"
+          :key="category.id"
+          :category="category"
+          class="categories__card"
+        />
       </div>
       <h3
         class="categories__title"
@@ -112,45 +107,6 @@ const imageImport = (filename) => `url(./images/${filename}.jpg)`;
 #kat-slano {
   .categories__title {
     order: -1;
-  }
-}
-
-.category-card {
-  flex: 0 1 390px;
-  aspect-ratio: 1 / 1;
-  box-shadow: var(--box-shadow-peach);
-  border-radius: var(--border-radius);
-  background: pink;
-
-  background-position: center;
-  background-size: cover;
-
-  display: flex;
-  align-items: end;
-  justify-content: end;
-  padding: 0.75rem;
-
-  @media only screen and (max-width: 800px) {
-    aspect-ratio: revert;
-    height: 350px;
-  }
-
-  @media only screen and (max-width: 600px) {
-    max-width: 350px;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1;
-    margin: 0 auto;
-  }
-
-  &__label {
-    font-family: var(--font-primary);
-    text-align: right;
-    padding: 1rem 1.2rem;
-    background: var(--white-opaque);
-    backdrop-filter: blur(10px);
-    border-radius: var(--border-radius);
-    text-transform: uppercase;
   }
 }
 </style>

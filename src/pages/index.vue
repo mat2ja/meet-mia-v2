@@ -49,7 +49,6 @@ const { left } = useElementBounding(heroRow);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
-
   transform: translateY(4px);
 
   @media only screen and(max-width: 800px) {

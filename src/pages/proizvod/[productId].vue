@@ -34,11 +34,7 @@ watchEffect(() => {
 
 <template>
   <div class="product-page">
-    <img
-      class="wrapper-img"
-      :src="`/images/products/${product.imageUrl}`"
-      alt="Product image"
-    />
+    <img class="wrapper-img" :src="`/images/products/${product.imageUrl}`" />
     <div class="row-wrapper row-wrapper--overview">
       <div ref="productRow" class="row">
         <div class="product-overview">

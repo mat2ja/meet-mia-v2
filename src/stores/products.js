@@ -146,13 +146,13 @@ export const useProducts = defineStore('products', {
           title: 'Popularno ovaj tjedan',
           icon: { name: 'trending-up' },
           itemCount: 10,
-          id: 'ponuda-popularno'
+          id: 'ponuda-popularno',
         },
         {
           title: 'Posebna ponuda',
           icon: { name: 'discount', type: 'solid' },
           itemCount: 8,
-          id: 'ponuda-posebno'
+          id: 'ponuda-posebno',
         },
       ],
     };
@@ -167,6 +167,14 @@ export const useProducts = defineStore('products', {
     },
     generateIds(count) {
       return [...Array(count)].map(() => nanoid(6));
+    },
+    getProductsByCategory(categoryId) {
+      if (categoryId === 0) {
+        return this.products;
+      }
+      return this.products.filter((product) =>
+        product.tags.includes(categoryId)
+      );
     },
   },
 });

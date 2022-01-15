@@ -8,32 +8,39 @@ export const useCategories = defineStore('categories', {
           {
             label: 'Kolači',
             id: 'kolaci',
+            tagId: 5,
           },
           {
             label: 'Torte',
             id: 'torte',
+            tagId: 12,
           },
           {
             label: 'Kroasani',
             id: 'kroasani',
+            tagId: 6,
           },
         ],
         slano: [
           {
             label: 'Sendviči',
             id: 'sendvici',
+            tagId: 7,
           },
           {
             label: 'Napitci',
             id: 'napitci',
+            tagId: 3,
           },
           {
             label: 'Cijela ponuda',
             id: 'cijela-ponuda',
+            tagId: 0,
           },
         ],
       },
       categoryTags: [
+        { label: 'sve', id: 0 },
         { label: 'slatko', id: 1 },
         { label: 'slano', id: 2 },
         { label: 'napitci', id: 3 },
@@ -45,11 +52,23 @@ export const useCategories = defineStore('categories', {
         { label: 'akcija', id: 9 },
         { label: 'zdravo', id: 10 },
         { label: 'vegan', id: 11 },
+        { label: 'torte', id: 12 },
       ],
     };
   },
-  getters: {},
+  getters: {
+    allCategories() {
+      const allCategories = [];
+      Object.entries(this.categories).forEach(([_catName, categories]) => {
+        allCategories.push(...categories);
+      });
+      return allCategories;
+    },
+  },
   actions: {
+    getCategoryById(id) {
+      return this.allCategories.find((category) => category.id === id) ?? null;
+    },
     getCategoryTag(id) {
       return this.categoryTags.find((tag) => tag.id === id) ?? null;
     },

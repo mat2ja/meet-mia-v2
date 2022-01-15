@@ -47,15 +47,12 @@ defineProps({
   transition: all 200ms cubic-bezier(0.26, 0.22, 0.27, 1.45);
 
   &:hover {
-    outline: 3px dashed transparent;
+    outline: 2px dashed var(--peach-600);
     outline-offset: 5px;
     transform: scale(0.98);
-  }
 
-  &:hover {
     z-index: 10;
     box-shadow: var(--box-shadow-peach-sm);
-    outline-color: var(--peach-600);
   }
 
   @media only screen and(max-width: 600px) {

@@ -35,29 +35,44 @@ const {
           </span>
           <ul v-if="isCategoryDropdownOpen" class="nav-drawer-dropdown__list">
             <li class="nav-drawer-dropdown__item">
-              <a href="#" class="nav-drawer-dropdown__link">
-                <span class="emoji">🍰️</span> Kolači</a
+              <RouterLink
+                :to="`categories/kolaci`"
+                class="nav-drawer-dropdown__link"
               >
+                <span class="emoji">🍰️</span> Kolači
+              </RouterLink>
             </li>
             <li class="nav-drawer-dropdown__item">
-              <a href="#" class="nav-drawer-dropdown__link">
-                <span class="emoji">🎂️</span> Torte</a
+              <RouterLink
+                :to="`categories/torte`"
+                class="nav-drawer-dropdown__link"
               >
+                <span class="emoji">🎂️</span> Torte
+              </RouterLink>
             </li>
             <li class="nav-drawer-dropdown__item">
-              <a href="#" class="nav-drawer-dropdown__link">
+              <RouterLink
+                :to="`categories/kroasani`"
+                class="nav-drawer-dropdown__link"
+              >
                 <span class="emoji">🥐</span> Krosasani
-              </a>
+              </RouterLink>
             </li>
             <li class="nav-drawer-dropdown__item">
-              <a href="#" class="nav-drawer-dropdown__link"
-                ><span class="emoji">🥪️</span> Sendviči</a
+              <RouterLink
+                :to="`categories/sendvici`"
+                class="nav-drawer-dropdown__link"
               >
+                <span class="emoji">🥪️</span> Sendviči
+              </RouterLink>
             </li>
             <li class="nav-drawer-dropdown__item">
-              <a href="#" class="nav-drawer-dropdown__link"
-                ><span class="emoji">🍹️</span> Ostalo</a
+              <RouterLink
+                :to="`categories/cijela-ponuda`"
+                class="nav-drawer-dropdown__link"
               >
+                <span class="emoji">🍹️</span> Sve
+              </RouterLink>
             </li>
           </ul>
         </li>
