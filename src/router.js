@@ -53,6 +53,10 @@ const routes = [
     name: 'aboutPage',
     component: () => import('@/pages/About.vue'),
   },
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: '/',
+  },
 ];
 
 const router = createRouter({
