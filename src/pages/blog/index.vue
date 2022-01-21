@@ -28,18 +28,17 @@ const formatDate = (ts) => {
             <div class="blog-post__image">
               <img :src="`/images/${post.imageUrl}`" alt="" />
             </div>
-            <div class="blog-post__content">
-              <div class="blog-post__head">
-                <p class="blog-post__date">{{ formatDate(post.ts) }}</p>
-                <h3 class="blog-post__content-title">{{ post.title }}</h3>
+            <RouterLink :to="`/blog/post/${post.id}`" class="blog-post__link">
+              <div class="blog-post__content">
+                <div class="blog-post__head">
+                  <p class="blog-post__date">{{ formatDate(post.ts) }}</p>
+                  <h3 class="blog-post__content-title">{{ post.title }}</h3>
+                </div>
+                <p class="blog-post__text">
+                  {{ post.text }}
+                </p>
               </div>
-              <p class="blog-post__text">
-                {{ post.text }}
-              </p>
-              <RouterLink :to="`/blog/post/${post.id}`" class="blog-post__link">
-                <span>Pročitaj više</span>
-              </RouterLink>
-            </div>
+            </RouterLink>
           </div>
         </div>
       </div>
@@ -79,6 +78,11 @@ const formatDate = (ts) => {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
     gap: 2rem;
+
+    @media only screen and (max-width: 800px) {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
   }
 }
 
@@ -88,9 +92,16 @@ const formatDate = (ts) => {
   background: var(--peach-100);
   box-shadow: var(--box-shadow-peach);
   border-radius: var(--border-radius-lg);
-  // overflow: hidden;
 
+  transition: all 250ms ease-out;
   min-height: 250px;
+
+  @media only screen and (max-width: 800px) {
+    min-height: auto;
+    display: flex;
+
+    position: relative;
+  }
 
   &:nth-child(2n) {
     .blog-post {
@@ -100,10 +111,21 @@ const formatDate = (ts) => {
 
       &__head {
         align-items: flex-end;
+
+        @media only screen and (max-width: 800px) {
+          align-items: flex-start;
+        }
       }
 
       &__content {
         text-align: right;
+
+        @media only screen and (max-width: 800px) {
+          text-align: left;
+        }
+      }
+
+      &__image {
       }
     }
   }
@@ -118,6 +140,21 @@ const formatDate = (ts) => {
     border-radius: var(--border-radius-lg);
     box-shadow: var(--box-shadow-peach);
     overflow: hidden;
+
+    @media only screen and (max-width: 800px) {
+      transform: scale(1);
+      order: 2;
+      max-width: 250px;
+
+      flex: 1;
+      width: 100%;
+
+      display: none;
+
+      img {
+        object-fit: cover;
+      }
+    }
 
     &:hover {
       img {
@@ -135,19 +172,50 @@ const formatDate = (ts) => {
     transform: scale(1);
 
     transition: all 500ms ease;
+
+    @media screen and (max-width: 800px) {
+      aspect-ratio: unset;
+    }
+  }
+
+  &__link {
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    transition: all 250ms ease-out;
+
+    text-align: left;
+    flex: 3;
+
+    &:hover {
+      background: var(--peach-200);
+    }
+
+    @media screen and (max-width: 800px) {
+      flex: 1;
+    }
   }
 
   &__content {
     padding: 2rem 2.5rem;
-    flex: 3;
-    text-align: left;
 
     display: flex;
     flex-direction: column;
 
+    height: 100%;
+
+    @media only screen and (max-width: 800px) {
+      font-size: var(--text-sm);
+      padding: 1rem 1.5rem;
+    }
+
     &-title {
       font-size: var(--text-3xl);
       margin-bottom: 1.5rem;
+
+      @media only screen and (max-width: 800px) {
+        font-size: var(--text-xl);
+      }
     }
   }
 
@@ -165,17 +233,6 @@ const formatDate = (ts) => {
     color: var(--burg-500);
     margin-bottom: 0.75rem;
     font-weight: 500;
-  }
-
-  &__link {
-    color: var(--burg-500);
-    margin-top: auto;
-    padding: 0.5rem 0;
-    margin-bottom: -0.5rem;
-
-    &:hover {
-      color: var(--burg-700);
-    }
   }
 }
 </style>
