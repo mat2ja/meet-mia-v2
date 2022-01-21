@@ -27,7 +27,7 @@
 
 html {
   box-sizing: border-box;
-  scrollbar-color: var(--peach-600) var(--peach-100);
+  scrollbar-color: var(--peach-500) var(--peach-100);
   scroll-behavior: smooth;
 }
 
@@ -48,7 +48,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -59,7 +59,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background: var(--peach-600);
+  background: var(--peach-500);
 }
 
 .fade-enter-active,

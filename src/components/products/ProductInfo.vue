@@ -80,7 +80,7 @@ const { width } = useWindowSize();
   .product-info--inner {
     padding: 2.5rem 3rem 2rem 2.5rem;
     background: var(--peach-200);
-    transform: translateY(2rem) translateX(1.5rem) rotate(-1deg);
+    transform: translateY(1.5rem) translateX(1.25rem) rotate(-1deg);
     box-shadow: var(--box-shadow-peach);
 
     border-radius: var(--border-radius-lg);

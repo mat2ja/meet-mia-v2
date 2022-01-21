@@ -172,10 +172,11 @@ name: productPage
 
     @media only screen and (max-width: 600px) {
       transform: scale(1.06);
+      padding: 0.25rem;
     }
 
     img {
-      transform: rotate(-2deg) scale(0.95);
+      transform: rotate(-1deg) scale(0.96);
       transition: all 500ms cubic-bezier(0.26, 0.22, 0.27, 1.45);
 
       display: block;
@@ -186,7 +187,7 @@ name: productPage
       box-shadow: var(--box-shadow-peach);
 
       &:hover {
-        transform: rotate(0deg);
+        transform: rotate(0deg) scale(1);
       }
     }
   }

@@ -5,8 +5,8 @@ defineProps({
 </script>
 
 <template>
-  <div class="product-grid">
-    <ProductCard v-for="item in items" :item="item" :key="item.id" />
+  <div v-dragscroll class="product-grid">
+    <ProductCard v-for="item in items" :key="item.id" :item="item" />
   </div>
 </template>
 
@@ -25,7 +25,7 @@ defineProps({
 
   &::-webkit-scrollbar {
     width: 0.5rem;
-    height: 0px;
+    height: 0;
   }
 
   @media only screen and(max-width: 800px) {
