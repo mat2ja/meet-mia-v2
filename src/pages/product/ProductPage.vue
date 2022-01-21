@@ -71,10 +71,6 @@ watchEffect(() => {
   </div>
 </template>
 
-<route lang="yaml">
-name: productPage
-</route>
-
 <style lang="scss" scoped>
 .product-page {
   padding-top: 5rem;

@@ -4,7 +4,6 @@ import vue from '@vitejs/plugin-vue';
 
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
-import Pages from 'vite-plugin-pages';
 import ViteFonts from 'vite-plugin-fonts';
 
 // https://vitejs.dev/config/
@@ -22,9 +21,6 @@ export default defineConfig({
     }),
     Components({
       /* options */
-    }),
-    Pages({
-      dirs: 'src/pages',
     }),
     ViteFonts({
       google: {
