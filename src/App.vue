@@ -29,7 +29,6 @@ html {
   box-sizing: border-box;
   scrollbar-color: var(--peach-600) var(--peach-100);
   scroll-behavior: smooth;
-  cursor: none;
 }
 
 body {
@@ -90,7 +89,6 @@ a {
   color: inherit;
   text-decoration: none;
   display: block;
-  cursor: none;
 }
 
 .no-scrollbar {
@@ -124,7 +122,7 @@ button {
   font: inherit;
   font-size: var(--text-base);
   color: inherit;
-  //  cursor: pointer;
+  cursor: pointer;
 
   transition: all 250ms ease-out;
 }
@@ -153,8 +151,6 @@ button {
   color: var(--peach-100);
   font-size: var(--text-base);
   font-weight: 700;
-  //  cursor: pointer;
-  cursor: none;
 
   &--primary {
     background: var(--burg-700);

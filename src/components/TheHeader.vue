@@ -65,7 +65,7 @@ const { y } = useWindowScroll();
 
   .icon {
     &__wrapper {
-      //  cursor: pointer;
+      cursor: pointer;
       padding: 1rem;
       display: flex;
 

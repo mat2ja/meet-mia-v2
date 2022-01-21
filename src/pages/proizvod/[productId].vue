@@ -27,6 +27,7 @@ watchEffect(() => {
   const {
     params: { productId },
   } = route;
+  console.log(productId);
   product.value = productsStore.getProductById(productId);
   randN.value = genDifferentNumber(randN.value, { to: BG_COUNT });
 });
@@ -164,7 +165,7 @@ name: productPage
     overflow: hidden;
     grid-column: 1 / 7;
     background: var(--peach-400);
-    padding: 1.5rem;
+    padding: 1rem;
 
     background-image: v-bind(bgPattern);
     box-shadow: var(--box-shadow-peach);

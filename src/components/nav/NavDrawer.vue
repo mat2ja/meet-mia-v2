@@ -167,7 +167,7 @@ const {
     justify-content: space-between;
     padding: 0.75rem 0;
     border-radius: var(--border-radius);
-    //  cursor: pointer;
+    cursor: pointer;
 
     .inner-icon {
     }

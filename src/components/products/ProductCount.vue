@@ -9,7 +9,9 @@ defineProps({
     <span class="product-cart-count__circle">
       <span class="product-cart-count__amount">{{ count }}</span>
     </span>
-    <p class="product-cart-count__text">već u košarici</p>
+    <p class="product-cart-count__text">
+      {{ count == 1 ? 'komad' : 'komada' }} u košarici
+    </p>
   </div>
 </template>
 

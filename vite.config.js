@@ -23,7 +23,9 @@ export default defineConfig({
     Components({
       /* options */
     }),
-    Pages({}),
+    Pages({
+      dirs: 'src/pages',
+    }),
     ViteFonts({
       google: {
         families: [

@@ -88,6 +88,7 @@
     img {
       width: 100%;
       max-width: 450px;
+      filter: var(--drop-shadow-peach-lg);
     }
   }
 
