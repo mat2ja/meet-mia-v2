@@ -1,11 +1,15 @@
 <script setup>
+import useTouch from '@/composables/useTouch.js';
+
 defineProps({
   items: Array,
 });
+
+const { isTouchDevice } = useTouch();
 </script>
 
 <template>
-  <div v-dragscroll class="product-grid">
+  <div v-dragscroll="!isTouchDevice" class="product-grid">
     <ProductCard v-for="item in items" :key="item.id" :item="item" />
   </div>
 </template>
