@@ -25,7 +25,12 @@ const formData = reactive({
             ></box-icon>
             <span> Zovem se </span>
           </label>
-          <input id="name" v-model="formData.name" type="text" />
+          <input
+            id="name"
+            v-model="formData.name"
+            type="text"
+            autocomplete="off"
+          />
         </div>
         <div class="contact-form__group">
           <label for="email">
@@ -37,7 +42,12 @@ const formData = reactive({
             ></box-icon>
             <span>Moj mail je</span>
           </label>
-          <input id="email" v-model="formData.email" type="email" />
+          <input
+            id="email"
+            v-model="formData.email"
+            type="email"
+            autocomplete="off"
+          />
         </div>
         <div class="contact-form__group">
           <label for="phone">
@@ -49,7 +59,12 @@ const formData = reactive({
             ></box-icon>
             <span>Nazovi me na</span>
           </label>
-          <input id="phone" v-model="formData.number" type="text" />
+          <input
+            id="phone"
+            v-model="formData.number"
+            type="text"
+            autocomplete="off"
+          />
         </div>
       </div>
       <div class="contact-form__groups contact-form__groups--message">
@@ -164,7 +179,7 @@ const formData = reactive({
 
     &:focus {
       outline: none;
-      background: var(--peach-200);
+      background: var(--peach-150);
       border-color: var(--burg-500);
       box-shadow: var(--box-shadow-peach);
     }

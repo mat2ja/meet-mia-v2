@@ -113,7 +113,7 @@ body {
       color: var(--burg-700);
       background: var(--peach-100);
 
-      border: 2px dashed var(--burg-500-opaque);
+      border: 2px solid var(--burg-500-opaque);
       border-radius: var(--border-radius-lg);
 
       font-family: inherit;
@@ -123,13 +123,14 @@ body {
       transition: all 250ms ease-out;
 
       @media only screen and (max-width: 800px) {
-        // TODO
         display: none;
       }
 
       &:focus {
         outline: none;
-        border: 2px solid var(--burg-500-opaque);
+        background: var(--peach-150);
+        border-color: var(--burg-500);
+        box-shadow: var(--box-shadow-peach);
       }
 
       &::placeholder {

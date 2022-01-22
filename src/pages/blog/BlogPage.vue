@@ -103,6 +103,11 @@ const formatDate = (ts) => {
     position: relative;
   }
 
+  &:hover {
+    background: var(--peach-200);
+    border-color: var(--burg-500);
+  }
+
   &:nth-child(2n) {
     .blog-post {
       &__image {
@@ -186,10 +191,6 @@ const formatDate = (ts) => {
 
     text-align: left;
     flex: 3;
-
-    &:hover {
-      background: var(--peach-200);
-    }
 
     @media screen and (max-width: 800px) {
       flex: 1;
