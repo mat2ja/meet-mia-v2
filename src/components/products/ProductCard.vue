@@ -17,7 +17,7 @@ defineProps({
     <div class="product-card__content">
       <div class="product">
         <div class="product__info">
-          <p class="product__crumbs">small text • 300g</p>
+          <p class="product__crumbs">bez aditiva • 300g</p>
           <h5 class="product__name">{{ item.name }}</h5>
           <p class="product__description">
             {{ item.description }}

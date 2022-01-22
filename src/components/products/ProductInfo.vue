@@ -154,6 +154,8 @@ const { width } = useWindowSize();
   &__crumbs {
     margin-top: -0.5rem;
     color: var(--burg-700-opaque);
+    font-size: var(--text-sm);
+    font-family: var(--font-display);
   }
 
   &__categories {
