@@ -120,7 +120,7 @@ body {
       font-size: var(--text-lg);
       font-weight: 500;
 
-      transition: all 2000ms ease-out;
+      transition: all 250ms ease-out;
 
       @media only screen and (max-width: 800px) {
         // TODO

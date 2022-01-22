@@ -39,7 +39,7 @@ const routes = [
     component: () => import('@/pages/Cart.vue'),
   },
   {
-    path: '/kosarica',
+    path: '/kontakt',
     name: 'cartPage',
     component: () => import('@/pages/Contact.vue'),
   },
