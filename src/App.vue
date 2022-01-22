@@ -122,7 +122,6 @@ button {
   font: inherit;
   font-size: var(--text-base);
   color: inherit;
-  cursor: pointer;
 
   transition: all 250ms ease-out;
 }
