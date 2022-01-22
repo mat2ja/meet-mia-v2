@@ -65,11 +65,17 @@
 
   color: var(--peach-20);
 
+  min-height: 350px;
+
+  @media only screen and (max-width: 600px) {
+    padding: 2rem 1.5rem;
+  }
+
   &__title {
     font-family: var(--font-primary);
     font-size: var(--text-2xl);
     text-align: left;
-    color: var(--peach-500);
+    color: var(--peach-400);
   }
 
   &__content {
@@ -80,12 +86,22 @@
     gap: 1rem;
 
     flex: 1;
+    margin-top: 0.75rem;
+
+    @media only screen and (max-width: 600px) {
+      font-size: var(--text-md);
+    }
   }
 
   &__item {
     display: flex;
     align-items: center;
     gap: 1rem;
+    text-align: left;
+
+    @media only screen and (max-width: 600px) {
+      gap: 0.75rem;
+    }
 
     .icon {
       color: var(--peach-500);
