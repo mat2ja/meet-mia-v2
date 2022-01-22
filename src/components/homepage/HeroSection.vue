@@ -96,8 +96,9 @@
 
     @media only screen and(max-width: 600px) {
       position: absolute;
-      top: -1.5rem;
-      right: -520px;
+      top: -0.5rem;
+      right: -100px;
+      width: fit-content;
 
       img {
         height: 70vw;

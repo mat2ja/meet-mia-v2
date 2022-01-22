@@ -44,6 +44,7 @@ const { left } = useElementBounding(heroRow);
 }
 .homepage {
   padding: 3rem 0 6rem;
+  overflow-x: hidden;
 
   background-image: url('/src/assets/wave-haikei-brown.svg');
   background-position: bottom;
