@@ -42,7 +42,7 @@
   &__content {
     display: flex;
     justify-content: space-around;
-    gap: 2rem;
+    gap: 4rem;
     width: 100%;
     max-width: 1400px;
 
