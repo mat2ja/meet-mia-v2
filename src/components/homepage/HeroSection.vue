@@ -14,7 +14,17 @@
       </div>
     </div>
     <div class="section-hero__image">
-      <img src="/images/cupcake.png" alt="cake" draggable="false" />
+      <img
+        srcset="
+          /images/cupcake-sm.png   300w,
+          /images/cupcake-mid.png  800w,
+          /images/cupcake.png     1000w
+        "
+        sizes="50vw"
+        src="/images/cupcake.png"
+        alt="cake"
+        draggable="false"
+      />
     </div>
   </section>
 </template>
@@ -26,6 +36,10 @@
   align-items: center;
   padding-bottom: 0;
   padding-top: 0;
+
+  &.row {
+    position: relative;
+  }
 
   @media only screen and(max-width: 800px) {
     grid-template-columns: repeat(4, 1fr);
@@ -52,6 +66,7 @@
       transform: translateY(0);
       width: fit-content;
       padding: 2rem 0;
+      width: 100%;
     }
   }
 
@@ -72,7 +87,6 @@
   &__image {
     grid-column: span 5;
     transform: translateX(5rem) translateY(-2rem);
-    position: relative;
 
     @media only screen and(max-width: 1000px) {
       grid-column: span 1;
@@ -81,8 +95,14 @@
     }
 
     @media only screen and(max-width: 600px) {
-      display: none;
-      transform: translateX(40%);
+      position: absolute;
+      top: -1.5rem;
+      right: -520px;
+
+      img {
+        height: 70vw;
+        object-fit: contain;
+      }
     }
 
     img {
