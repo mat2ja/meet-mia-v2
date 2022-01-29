@@ -38,9 +38,6 @@ const imageImport = (filename) => `url(./images/${filename}.jpg)`;
   justify-content: end;
   padding: 0.75rem;
 
-  &:hover {
-  }
-
   @media only screen and (max-width: 800px) {
     aspect-ratio: revert;
     height: 350px;
