@@ -26,7 +26,7 @@ const imageImport = (filename) => `url(./images/${filename}.jpg)`;
   aspect-ratio: 1 / 1;
   box-shadow: var(--box-shadow-peach);
   border-radius: var(--border-radius);
-  background: pink;
+  background: var(--peach-300);
 
   background-position: center;
   background-size: cover;
