@@ -1,7 +1,7 @@
 # 🧁️ Meet Mia Cake Shop
 
 - Designed and built from scratch
-- Vue 3, Vite and plain SCSS
+- Built with Vue 3, Vite and SCSS
 ---
 - Homepage
 
@@ -23,7 +23,3 @@
 - Blog posts page
 
 ![image](https://user-images.githubusercontent.com/46557266/164997707-f0af82d5-d709-477e-90ee-e82dc4e8857d.png)
-
-
-
-![Alt](https://repobeats.axiom.co/api/embed/84a24e5e60c716befff8e729557ad5c51f874a2d.svg "Repobeats analytics image")
