@@ -18,10 +18,6 @@ const cursorPoint = computed(() => {
 const moveCursor = (e) => {
   xChild.value = e.clientX;
   yChild.value = e.clientY;
-  // setTimeout(() => {
-  //   xParent.value = e.clientX - 15;
-  //   yParent.value = e.clientY - 15;
-  // }, 50);
 };
 
 onMounted(() => {

@@ -1,5 +1,3 @@
-<script setup></script>
-
 <template>
   <section class="section-hero row">
     <div class="section-hero__content">

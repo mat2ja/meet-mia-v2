@@ -1,5 +1,3 @@
-<script setup></script>
-
 <template>
   <div class="contact-card">
     <div class="contact-card__head">

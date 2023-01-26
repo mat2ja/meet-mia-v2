@@ -1,6 +1,5 @@
 {
-  "name": "vite-vue-starter",
-  "version": "0.0.0",
+  "name": "meet-mia",
   "scripts": {
     "dev": "vite",
     "build": "vite build && cp dist/index.html dist/200.html",
