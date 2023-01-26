@@ -75,9 +75,6 @@ defineProps({
     flex-direction: column;
   }
 
-  &__link {
-  }
-
   &__bottom {
     margin-top: auto;
   }

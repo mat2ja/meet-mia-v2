@@ -32,8 +32,7 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
-  padding-bottom: 0;
-  padding-top: 0;
+  padding-top: 4rem;
 
   &.row {
     position: relative;
@@ -84,6 +83,7 @@
 
   &__image {
     grid-column: span 5;
+    min-height: 450px;
     transform: translateX(5rem) translateY(-2rem);
 
     @media only screen and (max-width: 1000px) {
