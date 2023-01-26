@@ -75,7 +75,7 @@ watchEffect(() => {
 .product-page {
   padding-top: 5rem;
 
-  @media only screen and(max-width: 1000px) {
+  @media only screen and (max-width: 1000px) {
     padding-top: 3rem;
   }
 }
@@ -100,7 +100,7 @@ watchEffect(() => {
     background-size: cover;
     transform: translateY(4px);
 
-    @media only screen and(max-width: 1000px) {
+    @media only screen and (max-width: 1000px) {
       // padding-bottom: 6rem;
     }
   }
@@ -121,7 +121,7 @@ watchEffect(() => {
       margin-bottom: 1.5rem;
     }
 
-    @media only screen and(max-width: 1000px) {
+    @media only screen and (max-width: 1000px) {
       padding-top: 8rem;
     }
   }
@@ -129,11 +129,11 @@ watchEffect(() => {
   &__product-grid {
     padding-bottom: 8rem;
 
-    @media only screen and(max-width: 800px) {
+    @media only screen and (max-width: 800px) {
       padding-bottom: 5rem;
     }
 
-    @media only screen and(max-width: 500px) {
+    @media only screen and (max-width: 500px) {
       padding-bottom: 3rem;
     }
   }
@@ -145,7 +145,7 @@ watchEffect(() => {
   gap: 2rem;
   padding-bottom: 26vh;
 
-  @media only screen and(max-width: 1000px) {
+  @media only screen and (max-width: 1000px) {
     display: flex;
     gap: 2rem;
     flex-direction: column;

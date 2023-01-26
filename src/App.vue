@@ -11,6 +11,7 @@
 
 <style lang="scss">
 @import '@/assets/styles/variables';
+
 * {
   margin: 0;
   padding: 0;
@@ -193,15 +194,8 @@ button {
 
 .main {
   margin-top: var(--nav-height);
-  // padding-top: 2rem;
-  // padding-bottom: 6rem;
-  // margin-bottom: 4rem;
   flex: 1;
   display: flex;
   flex-direction: column;
-
-  @media only screen and(min-width: 800px) {
-    // padding-top: 4rem;
-  }
 }
 </style>

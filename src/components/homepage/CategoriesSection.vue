@@ -60,7 +60,7 @@ const imageImport = (filename) => `url(./images/${filename}.jpg)`;
       }
     }
 
-    @media only screen and(max-width: 1000px) {
+    @media only screen and (max-width: 1000px) {
       grid-template-columns: 1fr;
     }
   }

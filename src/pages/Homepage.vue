@@ -52,14 +52,14 @@ const { left } = useElementBounding(heroRow);
   background-size: contain;
   transform: translateY(4px);
 
-  @media only screen and(max-width: 800px) {
+  @media only screen and (max-width: 800px) {
     padding-bottom: 4rem;
   }
 
   &__products {
     margin-bottom: 3rem;
 
-    @media only screen and(max-width: 800px) {
+    @media only screen and (max-width: 800px) {
       margin-bottom: 1rem;
     }
   }
@@ -67,7 +67,7 @@ const { left } = useElementBounding(heroRow);
   &__categories {
     margin-top: 10rem;
 
-    @media only screen and(max-width: 800px) {
+    @media only screen and (max-width: 800px) {
       margin-top: 6rem;
     }
   }

@@ -4,12 +4,12 @@ import router from './router.js';
 import 'boxicons';
 
 import { createPinia } from 'pinia';
-import { dragscrollNext } from 'vue-dragscroll';
+import { dragscroll } from 'vue-dragscroll';
 
 const app = createApp(App);
 
 app.use(router);
 app.use(createPinia());
-app.directive('dragscroll', dragscrollNext);
+app.directive('dragscroll', dragscroll);
 
 app.mount('#app');

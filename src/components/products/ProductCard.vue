@@ -63,7 +63,7 @@ defineProps({
     }
   }
 
-  @media only screen and(max-width: 600px) {
+  @media only screen and (max-width: 600px) {
     flex: 0 0 250px;
   }
 

@@ -32,11 +32,11 @@ const { isTouchDevice } = useTouch();
     height: 0;
   }
 
-  @media only screen and(max-width: 800px) {
+  @media only screen and (max-width: 800px) {
     margin-top: 2rem;
   }
 
-  @media only screen and(max-width: 600px) {
+  @media only screen and (max-width: 600px) {
   }
 }
 </style>

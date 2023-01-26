@@ -39,11 +39,11 @@
     position: relative;
   }
 
-  @media only screen and(max-width: 800px) {
+  @media only screen and (max-width: 800px) {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  @media only screen and(max-width: 600px) {
+  @media only screen and (max-width: 600px) {
     padding-top: 2rem;
     padding-bottom: 4rem;
   }
@@ -53,13 +53,13 @@
     transform: translateY(-2rem);
     z-index: 2;
 
-    @media only screen and(max-width: 1000px) {
+    @media only screen and (max-width: 1000px) {
       grid-column: 1 / span 3;
       width: max-content;
       transform: translateY(0);
     }
 
-    @media only screen and(max-width: 600px) {
+    @media only screen and (max-width: 600px) {
       grid-column: 1 / -1;
       transform: translateY(0);
       width: fit-content;
@@ -71,13 +71,13 @@
   &__title {
     font-size: var(--text-8xl);
 
-    @media only screen and(max-width: 1200px) {
+    @media only screen and (max-width: 1200px) {
       font-size: var(--text-7xl);
     }
-    @media only screen and(max-width: 800px) {
+    @media only screen and (max-width: 800px) {
       font-size: var(--text-6xl);
     }
-    @media only screen and(max-width: 600px) {
+    @media only screen and (max-width: 600px) {
       font-size: var(--text-5xl);
     }
   }
@@ -86,13 +86,13 @@
     grid-column: span 5;
     transform: translateX(5rem) translateY(-2rem);
 
-    @media only screen and(max-width: 1000px) {
+    @media only screen and (max-width: 1000px) {
       grid-column: span 1;
       width: 750px;
       transform: translateX(0);
     }
 
-    @media only screen and(max-width: 600px) {
+    @media only screen and (max-width: 600px) {
       position: absolute;
       top: -0.5rem;
       right: -100px;
