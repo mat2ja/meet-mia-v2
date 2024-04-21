@@ -1,5 +1,6 @@
 # 🧁️ Meet Mia Cake Shop
 
+- Built as a part of _Web Design_ college course
 - Designed and built from scratch
 - Built with Vue 3, Vite and SCSS
 ---
