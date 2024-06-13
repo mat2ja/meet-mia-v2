@@ -1,7 +1,7 @@
 <template>
   <section class="section-hero row">
     <div class="section-hero__content">
-      <h1 class="section-hero__title">Zgrabi si torticu</h1>
+      <h1 class="section-hero__title">Slatke kreacije</h1>
       <div class="section-hero__buttons">
         <a href="#ponuda-popularno">
           <button class="btn btn--primary">Istraži ponudu</button>
@@ -51,11 +51,13 @@
     grid-column: 1 / span 7;
     transform: translateY(-2rem);
     z-index: 2;
+    padding-left: 2rem;
 
     @media only screen and (max-width: 1000px) {
       grid-column: 1 / span 3;
       width: max-content;
       transform: translateY(0);
+      padding-left: 0;
     }
 
     @media only screen and (max-width: 600px) {
